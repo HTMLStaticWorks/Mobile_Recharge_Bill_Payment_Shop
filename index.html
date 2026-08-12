@@ -1,1 +1,713 @@
-uetwre
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapPay - Instant Mobile Recharge & Bill Payments</title>
+    <meta name="description"
+        content="ZapPay provides lightning-fast mobile recharge, DTH, and utility bill payments. Secure, instant, and zero extra charges.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg">
+    <link rel="apple-touch-icon" href="assets/img/logo-mark.svg">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+        // Applied before first paint so a stored dark theme never flashes light.
+        (function () { try { var t = localStorage.getItem("zappay_theme"); var d = localStorage.getItem("zappay_dir"); var e = document.documentElement; if (t === "dark") { e.setAttribute("data-theme", "dark"); } else { e.removeAttribute("data-theme"); } if (d) { e.setAttribute("dir", d); } e.classList.add("js"); } catch (err) { } })();
+    </script>
+    <!-- GA_TAG -->
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <button class="drawer-close" aria-label="Close menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="operators.html">Operators</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="drawer-actions">
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+            <a href="login.html" class="btn btn-primary" style="flex: 1; text-align: center;">Login</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="operators.html">Operators</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="hamburger" aria-label="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container text-center">
+                <span class="eyebrow"><span class="eyebrow-dot"></span> Live &middot; 10,482 payments processed
+                    today</span>
+
+                <h1 class="mb-3">Recharge anything.<br><span class="gradient-text">Pay everything.</span></h1>
+
+                <div class="hero-typed">
+                    <span class="dot-live"></span>
+                    <span class="hero-animated-text"
+                        data-phrases="&#8377;0 &rarr; Recharged in 2 seconds.|Electricity bill cleared. &#8377;1,240.|DTH pack renewed. No extra fee."></span>
+                </div>
+
+                <p class="lead hero-lead">The fastest, most secure way to recharge your mobile, renew DTH packs and
+                    settle utility bills &mdash; online around the clock, or over the counter at our store.</p>
+
+                <div class="hero-actions">
+                    <a href="services.html" class="btn btn-primary btn-lg">Pay Bills Now <i
+                            data-lucide="arrow-right"></i></a>
+                    <a href="operators.html" class="btn btn-outline btn-lg">View Operators</a>
+                </div>
+
+                <div class="trust-row">
+                    <div class="avatar-stack">
+                        <img src="assets/img/avatar-1.svg" alt="" width="38" height="38">
+                        <img src="assets/img/avatar-2.svg" alt="" width="38" height="38">
+                        <img src="assets/img/avatar-3.svg" alt="" width="38" height="38">
+                    </div>
+                    <span class="stars" aria-hidden="true">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                            data-lucide="star"></i><i data-lucide="star"></i>
+                    </span>
+                    <span>4.9/5 from <strong>50,000+</strong> customers</span>
+                </div>
+
+                <!-- Product shot -->
+                <div class="hero-visual reveal">
+                    <img src="assets/img/hero-app.svg"
+                        alt="The ZapPay app confirming a &#8377;499 mobile recharge completed in two seconds"
+                        width="720" height="823">
+                </div>
+
+                <!-- Stats -->
+                <div class="stat-strip reveal">
+                    <div class="stat">
+                        <div class="stat-value" data-count="10" data-suffix="K+">10K+</div>
+                        <p class="stat-label">Daily transactions</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="100" data-suffix="+">100+</div>
+                        <p class="stat-label">Supported providers</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="99.9" data-suffix="%">99.9%</div>
+                        <p class="stat-label">Success rate</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">&#8377;0</div>
+                        <p class="stat-label">Convenience fee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provider marquee -->
+        <section class="logo-strip" style="padding: var(--space-4) 0;">
+            <div class="container">
+                <p class="section-label">Works with every provider you already use</p>
+            </div>
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#1D4ED8; --tile-b:#3B82F6;">Ji</span> Jio</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#DC2626; --tile-b:#F87171;">Ai</span> Airtel</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#BE123C; --tile-b:#FB7185;">Vi</span> Vi</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#0369A1; --tile-b:#38BDF8;">BS</span> BSNL</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#6D28D9; --tile-b:#A855F7;">TP</span> Tata Play</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#C2410C; --tile-b:#FB923C;">DT</span> Dish TV</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#B45309; --tile-b:#FBBF24;">SD</span> Sun Direct</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#0E7490; --tile-b:#22D3EE;">WB</span> Water Board</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#EA580C; --tile-b:#F59E0B;">GP</span> Gas Pipe</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#7C3AED; --tile-b:#C084FC;">EB</span> Electricity Boards</span>
+                    <span class="marquee-item"><span class="brand-tile"
+                            style="--tile-a:#047857; --tile-b:#34D399;">FT</span> FASTag</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services bg-alt band-glow">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our services</span>
+                    <h2>Everything you pay for, in one place</h2>
+                    <p>Instant processing for all your essential payments &mdash; with a receipt in your inbox before
+                        you close the tab.</p>
+                </div>
+                <div class="grid grid-4">
+                    <!-- Mobile -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Person holding a smartphone" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="smartphone"></i></div>
+                        <h3 class="card-title">Mobile Recharge</h3>
+                        <p>Prepaid and postpaid mobile recharges for all major networks.</p>
+                        <a href="services.html" class="btn btn-outline">Recharge</a>
+                    </div>
+                    <!-- DTH -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Television screen in a living room" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="tv"></i></div>
+                        <h3 class="card-title">DTH Recharge</h3>
+                        <p>Instant activation for your DTH services and channel packs.</p>
+                        <a href="services.html" class="btn btn-outline">Pay DTH</a>
+                    </div>
+                    <!-- Electricity -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Power transmission lines at dusk" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="lightbulb"></i></div>
+                        <h3 class="card-title">Electricity Bill</h3>
+                        <p>Pay your electricity bills securely across all state boards.</p>
+                        <a href="services.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                    <!-- Broadband -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Wi-Fi router on a desk" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="wifi"></i></div>
+                        <h3 class="card-title">Broadband</h3>
+                        <p>Uninterrupted internet with our fast broadband payments.</p>
+                        <a href="services.html" class="btn btn-outline">Pay Broadband</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How it works -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">How it works</span>
+                    <h2>Three taps, and it's done</h2>
+                    <p>No sign-up walls, no waiting screens, no surprise charges at checkout.</p>
+                </div>
+                <div class="step-grid">
+                    <div class="step reveal">
+                        <div class="step-media">
+                            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Browsing options on a phone screen" loading="lazy" width="800" height="450">
+                        </div>
+                        <div class="step-num">1</div>
+                        <h3>Pick your provider</h3>
+                        <p>Choose from 100+ telecom, DTH and utility providers &mdash; we save your favourites for next
+                            time.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-media">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Typing a number into a mobile phone" loading="lazy" width="800" height="450">
+                        </div>
+                        <div class="step-num">2</div>
+                        <h3>Enter your number</h3>
+                        <p>Type the mobile or consumer number. We fetch the live plan or outstanding amount for you.</p>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-media">
+                            <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Making a contactless card payment" loading="lazy" width="800" height="450">
+                        </div>
+                        <div class="step-num">3</div>
+                        <h3>Pay and relax</h3>
+                        <p>Confirm with UPI, card or netbanking. Activation lands in seconds with a receipt to match.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Explorer -->
+        <section class="plan-explorer">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Plan finder</span>
+                    <h2>Compare plans without leaving the page</h2>
+                    <p>Switch categories to see what each pack actually gets you &mdash; no login, no redirect.</p>
+                </div>
+
+                <div class="explorer reveal" data-plan-explorer>
+                    <div class="tabs" role="tablist" aria-label="Plan categories">
+                        <button class="tab-btn" role="tab" id="tab-mobile" aria-controls="panel-mobile"
+                            aria-selected="true" tabindex="0"><i data-lucide="smartphone"></i> Mobile</button>
+                        <button class="tab-btn" role="tab" id="tab-dth" aria-controls="panel-dth" aria-selected="false"
+                            tabindex="-1"><i data-lucide="tv"></i> DTH</button>
+                        <button class="tab-btn" role="tab" id="tab-broadband" aria-controls="panel-broadband"
+                            aria-selected="false" tabindex="-1"><i data-lucide="wifi"></i> Wifi</button>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="tab-panel" role="tabpanel" id="panel-mobile" aria-labelledby="tab-mobile" tabindex="0">
+                        <div class="plan-grid">
+                            <article class="plan-card">
+                                <h3>Daily Saver</h3>
+                                <div class="plan-price">&#8377;239</div>
+                                <p class="plan-term">28 days validity</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 1.5 GB per day</li>
+                                    <li><i data-lucide="check"></i> Unlimited calls, any network</li>
+                                    <li><i data-lucide="check"></i> 100 SMS per day</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-outline">Recharge</a>
+                            </article>
+                            <article class="plan-card is-featured">
+                                <span class="plan-badge">Popular</span>
+                                <h3>Everyday Plus</h3>
+                                <div class="plan-price">&#8377;299</div>
+                                <p class="plan-term">28 days validity</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 2 GB per day</li>
+                                    <li><i data-lucide="check"></i> Unlimited calls, any network</li>
+                                    <li><i data-lucide="check"></i> 100 SMS per day</li>
+                                    <li><i data-lucide="check"></i> Weekend data rollover</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-primary">Recharge</a>
+                            </article>
+                            <article class="plan-card">
+                                <h3>Long Haul</h3>
+                                <div class="plan-price">&#8377;859</div>
+                                <p class="plan-term">84 days validity</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 2 GB per day</li>
+                                    <li><i data-lucide="check"></i> Unlimited calls, any network</li>
+                                    <li><i data-lucide="check"></i> One recharge per quarter</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-outline">Recharge</a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- DTH -->
+                    <div class="tab-panel" role="tabpanel" id="panel-dth" aria-labelledby="tab-dth" tabindex="0" hidden>
+                        <div class="plan-grid">
+                            <article class="plan-card">
+                                <h3>Starter Pack</h3>
+                                <div class="plan-price">&#8377;199</div>
+                                <p class="plan-term">30 days validity</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 120+ SD channels</li>
+                                    <li><i data-lucide="check"></i> Regional bundle included</li>
+                                    <li><i data-lucide="check"></i> Instant reactivation</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-outline">Pay DTH</a>
+                            </article>
+                            <article class="plan-card is-featured">
+                                <span class="plan-badge">Popular</span>
+                                <h3>Family HD</h3>
+                                <div class="plan-price">&#8377;449</div>
+                                <p class="plan-term">30 days validity</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 250+ channels, 60 in HD</li>
+                                    <li><i data-lucide="check"></i> Sports and movie add-ons</li>
+                                    <li><i data-lucide="check"></i> Two connections per account</li>
+                                    <li><i data-lucide="check"></i> Free HD set-top upgrade</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-primary">Pay DTH</a>
+                            </article>
+                            <article class="plan-card">
+                                <h3>Annual Saver</h3>
+                                <div class="plan-price">&#8377;4,299</div>
+                                <p class="plan-term">365 days validity</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 250+ channels, 60 in HD</li>
+                                    <li><i data-lucide="check"></i> Two months free on annual</li>
+                                    <li><i data-lucide="check"></i> Priority installation support</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-outline">Pay DTH</a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Broadband -->
+                    <div class="tab-panel" role="tabpanel" id="panel-broadband" aria-labelledby="tab-broadband"
+                        tabindex="0" hidden>
+                        <div class="plan-grid">
+                            <article class="plan-card">
+                                <h3>Home Basic</h3>
+                                <div class="plan-price">&#8377;499</div>
+                                <p class="plan-term">Billed monthly</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 50 Mbps, truly unlimited</li>
+                                    <li><i data-lucide="check"></i> Free router on 6-month plans</li>
+                                    <li><i data-lucide="check"></i> No fair-usage throttling</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                            </article>
+                            <article class="plan-card is-featured">
+                                <span class="plan-badge">Popular</span>
+                                <h3>Work From Home</h3>
+                                <div class="plan-price">&#8377;799</div>
+                                <p class="plan-term">Billed monthly</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 150 Mbps, truly unlimited</li>
+                                    <li><i data-lucide="check"></i> Symmetric upload speeds</li>
+                                    <li><i data-lucide="check"></i> Bundled OTT subscriptions</li>
+                                    <li><i data-lucide="check"></i> Same-day fault response</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-primary">Pay Bill</a>
+                            </article>
+                            <article class="plan-card">
+                                <h3>Fibre Max</h3>
+                                <div class="plan-price">&#8377;1,299</div>
+                                <p class="plan-term">Billed monthly</p>
+                                <ul class="plan-feats">
+                                    <li><i data-lucide="check"></i> 300 Mbps, truly unlimited</li>
+                                    <li><i data-lucide="check"></i> Static IP on request</li>
+                                    <li><i data-lucide="check"></i> Dedicated support line</li>
+                                </ul>
+                                <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="plan-note">Prices shown are indicative. Live plans load once you pick your operator and
+                    circle.</p>
+            </div>
+        </section>
+
+        <!-- Supported Operators Grid -->
+        <section class="operators bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Providers</span>
+                    <h2>Supported Operators</h2>
+                    <p>We partner with all major telecom and utility providers.</p>
+                </div>
+                <div class="grid grid-6 text-center">
+                    <div class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Mobile network SIM card" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#1D4ED8; --tile-b:#3B82F6;">Ji</span>
+                        <strong>Jio</strong>
+                        <p>Prepaid &amp; Postpaid</p>
+                    </div>
+                    <div class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Mobile phone on a plain background" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#DC2626; --tile-b:#F87171;">Ai</span>
+                        <strong>Airtel</strong>
+                        <p>Prepaid &amp; Postpaid</p>
+                    </div>
+                    <div class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Connected devices on a desk" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#BE123C; --tile-b:#FB7185;">Vi</span>
+                        <strong>Vi</strong>
+                        <p>Prepaid &amp; Postpaid</p>
+                    </div>
+                    <div class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Satellite dish against the sky" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#6D28D9; --tile-b:#A855F7;">TP</span>
+                        <strong>Tata Play</strong>
+                        <p>DTH</p>
+                    </div>
+                    <div class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Running water from a tap" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#0E7490; --tile-b:#22D3EE;">WB</span>
+                        <strong>Water Board</strong>
+                        <p>Utility</p>
+                    </div>
+                    <div class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Gas pipeline fittings" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#EA580C; --tile-b:#F59E0B;">GP</span>
+                        <strong>Gas Pipe</strong>
+                        <p>Utility</p>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="operators.html" class="btn btn-outline">View All Providers</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Why ZapPay -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Why ZapPay</span>
+                    <h2>Built for people who hate waiting</h2>
+                </div>
+                <div class="grid grid-4">
+                    <div class="feature-item reveal">
+                        <div class="card-icon"><i data-lucide="zap"></i></div>
+                        <h3>Instant Processing</h3>
+                        <p>No waiting. Your recharge or bill payment is processed in seconds.</p>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="card-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Secure Payments</h3>
+                        <p>Bank-grade encryption for all your transactions and data.</p>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="card-icon"><i data-lucide="badge-percent"></i></div>
+                        <h3>Zero Extra Charges</h3>
+                        <p>What you see is what you pay. No hidden fees or convenience charges.</p>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="card-icon"><i data-lucide="clock"></i></div>
+                        <h3>24/7 Availability</h3>
+                        <p>Our online portal is open round the clock for your convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Timings -->
+        <section class="timings" style="padding-top: 0;">
+            <div class="container">
+                <div class="timings-banner">
+                    <i data-lucide="store" style="width: 32px; height: 32px; flex-shrink: 0;"></i>
+                    <div>
+                        <p><strong>Visit Our Store:</strong> Monday &ndash; Saturday | 9:00 AM &ndash; 8:00 PM</p>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">Sunday closed. Online payments available 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials bg-alt band-glow">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Testimonials</span>
+                    <h2>What Our Customers Say</h2>
+                    <p>Trusted by thousands for their daily recharges and bill payments.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="quote-card reveal">
+                        <span class="stars" aria-label="Rated 5 out of 5">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                data-lucide="star"></i><i data-lucide="star"></i>
+                        </span>
+                        <p>ZapPay is incredibly fast. My electricity bill was updated instantly on the provider's end.
+                            Highly recommended!</p>
+                        <div class="quote-author">
+                            <img src="assets/img/avatar-1.svg" alt="" width="46" height="46">
+                            <span>
+                                <span class="name">Rahul S.</span><br>
+                                <span class="role">Pays 4 bills a month</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="quote-card reveal">
+                        <span class="stars" aria-label="Rated 5 out of 5">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                data-lucide="star"></i><i data-lucide="star"></i>
+                        </span>
+                        <p>I always use their store for bulk recharges for my business, but their online portal is just
+                            as seamless.</p>
+                        <div class="quote-author">
+                            <img src="assets/img/avatar-2.svg" alt="" width="46" height="46">
+                            <span>
+                                <span class="name">Anita K.</span><br>
+                                <span class="role">Retail business owner</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="quote-card reveal">
+                        <span class="stars" aria-label="Rated 5 out of 5">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                data-lucide="star"></i><i data-lucide="star"></i>
+                        </span>
+                        <p>The portal is so easy to use, and I love that there are zero hidden fees for DTH recharges
+                            unlike other apps.</p>
+                        <div class="quote-author">
+                            <img src="assets/img/avatar-3.svg" alt="" width="46" height="46">
+                            <span>
+                                <span class="name">Vikram D.</span><br>
+                                <span class="role">DTH &amp; broadband customer</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA (Corporate Recharge) -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2 class="mb-2">Need bulk recharge for your business?</h2>
+                    <p>Special rates, consolidated invoicing and a dedicated account manager for corporate clients.</p>
+                    <div class="hero-actions">
+                        <a href="services.html#corporate" class="btn btn-primary btn-lg">Estimate Bulk Pricing</a>
+                        <a href="contact.html#corporate" class="btn btn-outline btn-lg">Contact Corporate Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
+                    </a>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online,
+                        and at our neighbourhood store.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                <path d="m10 15 5-3-5-3z" />
+                            </svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Mobile Recharge</a></li>
+                        <li><a href="services.html">DTH Recharge</a></li>
+                        <li><a href="services.html">Utility Bills</a></li>
+                        <li><a href="services.html">FASTag</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin"
+                                    style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone"
+                                    style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail"
+                                    style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> ZapPay. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span><i data-lucide="shield-check"></i> PCI-DSS aligned</span>
+                    <span><i data-lucide="lock"></i> 256-bit encryption</span>
+                    <span><i data-lucide="badge-check"></i> Verified merchant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

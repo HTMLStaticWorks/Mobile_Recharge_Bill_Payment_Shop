@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supported Operators - ZapPay</title>
+    <meta name="description" content="View all supported telecom operators, DTH providers, and utility boards available on ZapPay.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg">
+    <link rel="apple-touch-icon" href="assets/img/logo-mark.svg">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      // Applied before first paint so a stored dark theme never flashes light.
+      (function(){try{var t=localStorage.getItem("zappay_theme");var d=localStorage.getItem("zappay_dir");var e=document.documentElement;if(t==="dark"){e.setAttribute("data-theme","dark");}else{e.removeAttribute("data-theme");}if(d){e.setAttribute("dir",d);}e.classList.add("js");}catch(err){}})();
+    </script>
+    <!-- GA_TAG -->
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <button class="drawer-close" aria-label="Close menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="operators.html" class="active">Operators</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="drawer-actions">
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+            <a href="login.html" class="btn btn-primary" style="flex: 1; text-align: center;">Login</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="operators.html" class="active">Operators</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="hamburger" aria-label="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container text-center">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Operators</span>
+                </nav>
+                <h1>Supported Providers</h1>
+                <p class="lead" style="max-width: 620px; margin: 0 auto;">We support recharges and bill payments for hundreds of providers.</p>
+            </div>
+        </section>
+
+        <!-- Provider Finder -->
+        <section class="provider-finder" style="padding-bottom: 0;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Find yours</span>
+                    <h2>Search every provider we support</h2>
+                    <p>Type a name or narrow by category &mdash; the list below filters as you go.</p>
+                </div>
+
+                <div class="filter-bar reveal" data-provider-finder>
+                    <div class="filter-search">
+                        <span class="search-icon"><i data-lucide="search"></i></span>
+                        <label for="provider_search" class="form-label"
+                            style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Search
+                            providers</label>
+                        <input type="search" id="provider_search" class="form-control" autocomplete="off"
+                            placeholder="Try &ldquo;Jio&rdquo;, &ldquo;BESCOM&rdquo; or &ldquo;FASTag&rdquo;&hellip;"
+                            data-finder-search>
+                        <button type="button" class="filter-clear" data-finder-clear aria-label="Clear search" hidden>
+                            <i data-lucide="x"></i>
+                        </button>
+                    </div>
+
+                    <div class="filter-chips" role="group" aria-label="Filter by category">
+                        <button type="button" class="filter-chip" data-finder-chip="all" data-label="providers"
+                            aria-pressed="true">All <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="telecom" data-label="telecom operators"
+                            aria-pressed="false">Telecom <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="dth" data-label="DTH providers"
+                            aria-pressed="false">DTH <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="electricity"
+                            data-label="electricity boards" aria-pressed="false">Electricity <span
+                                class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="water" data-label="water boards"
+                            aria-pressed="false">Water <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="gas" data-label="gas providers"
+                            aria-pressed="false">Gas <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="broadband"
+                            data-label="broadband providers" aria-pressed="false">Broadband <span
+                                class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="fastag" data-label="FASTag issuers"
+                            aria-pressed="false">FASTag <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="creditcard"
+                            data-label="card issuers" aria-pressed="false">Credit Card <span
+                                class="count"></span></button>
+                    </div>
+
+                    <p class="filter-status" role="status" data-finder-status></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- No results -->
+        <div class="filter-empty" data-finder-empty hidden>
+            <div class="card-icon"><i data-lucide="search-x"></i></div>
+            <h3>Nothing matches that</h3>
+            <p>We add new boards and operators every week &mdash; tell us which one you need and we'll get it live.</p>
+            <div class="hero-actions justify-center">
+                <button type="button" class="btn btn-outline" data-finder-reset>Clear filters</button>
+                <a href="contact.html" class="btn btn-primary">Request a provider</a>
+            </div>
+        </div>
+
+        <!-- Telecom & DTH -->
+        <section class="providers-group" data-provider-group>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Connectivity</span>
+                    <h2>Telecom &amp; DTH</h2>
+                </div>
+                <div class="grid grid-6 text-center">
+                    <!-- Telecom -->
+                    <div class="card card-compact reveal" data-provider="Jio" data-category="telecom">
+                        <span class="brand-tile" style="--tile-a:#1D4ED8; --tile-b:#3B82F6;">Ji</span>
+                        <strong>Jio</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Prepaid/Postpaid</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Airtel" data-category="telecom">
+                        <span class="brand-tile" style="--tile-a:#DC2626; --tile-b:#F87171;">Ai</span>
+                        <strong>Airtel</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Prepaid/Postpaid</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Vi" data-category="telecom">
+                        <span class="brand-tile" style="--tile-a:#BE123C; --tile-b:#FB7185;">Vi</span>
+                        <strong>Vi</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Prepaid/Postpaid</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="BSNL" data-category="telecom">
+                        <span class="brand-tile" style="--tile-a:#0369A1; --tile-b:#38BDF8;">BS</span>
+                        <strong>BSNL</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Prepaid/Postpaid</p>
+                    </div>
+                    
+                    <!-- DTH -->
+                    <div class="card card-compact reveal" data-provider="Tata Play" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#6D28D9; --tile-b:#A855F7;">TP</span>
+                        <strong>Tata Play</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Airtel DTH" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#B91C1C; --tile-b:#FB7185;">AD</span>
+                        <strong>Airtel DTH</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Dish TV" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#C2410C; --tile-b:#FB923C;">DT</span>
+                        <strong>Dish TV</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Sun Direct" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#B45309; --tile-b:#FBBF24;">SD</span>
+                        <strong>Sun Direct</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utility Providers -->
+        <section class="providers-group bg-alt band-glow" data-provider-group>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Households</span>
+                    <h2>Utility Providers</h2>
+                </div>
+                <div class="grid grid-6 text-center">
+                    <!-- Utilities -->
+                    <div class="card card-compact reveal" data-provider="TNEB" data-category="electricity">
+                        <span class="brand-tile" style="--tile-a:#7C3AED; --tile-b:#C084FC;">TN</span>
+                        <strong>TNEB</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Electricity</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="BESCOM" data-category="electricity">
+                        <span class="brand-tile" style="--tile-a:#6D28D9; --tile-b:#A78BFA;">BE</span>
+                        <strong>BESCOM</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Electricity</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="MSEDCL" data-category="electricity">
+                        <span class="brand-tile" style="--tile-a:#5B21B6; --tile-b:#8B5CF6;">MS</span>
+                        <strong>MSEDCL</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Electricity</p>
+                    </div>
+                    
+                    <div class="card card-compact reveal" data-provider="BWSSB" data-category="water">
+                        <span class="brand-tile" style="--tile-a:#0E7490; --tile-b:#22D3EE;">BW</span>
+                        <strong>BWSSB</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Water</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="DJB" data-category="water">
+                        <span class="brand-tile" style="--tile-a:#0C6E8F; --tile-b:#38BDF8;">DJ</span>
+                        <strong>DJB</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Water</p>
+                    </div>
+                    
+                    <div class="card card-compact reveal" data-provider="IGL" data-category="gas">
+                        <span class="brand-tile" style="--tile-a:#EA580C; --tile-b:#F59E0B;">IG</span>
+                        <strong>IGL</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Gas</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="MGL" data-category="gas">
+                        <span class="brand-tile" style="--tile-a:#C2410C; --tile-b:#FBBF24;">MG</span>
+                        <strong>MGL</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Gas</p>
+                    </div>
+
+                    <div class="card card-compact reveal" data-provider="JioFiber" data-category="broadband">
+                        <span class="brand-tile" style="--tile-a:#1D4ED8; --tile-b:#60A5FA;">JF</span>
+                        <strong>JioFiber</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Broadband</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Airtel Xstream" data-category="broadband">
+                        <span class="brand-tile" style="--tile-a:#B91C1C; --tile-b:#F87171;">AX</span>
+                        <strong>Airtel Xstream</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Broadband</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="ICICI FASTag" data-category="fastag">
+                        <span class="brand-tile" style="--tile-a:#B45309; --tile-b:#F59E0B;">IC</span>
+                        <strong>ICICI FASTag</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">FASTag</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="HDFC FASTag" data-category="fastag">
+                        <span class="brand-tile" style="--tile-a:#1E40AF; --tile-b:#3B82F6;">HD</span>
+                        <strong>HDFC FASTag</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">FASTag</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="SBI Card" data-category="creditcard">
+                        <span class="brand-tile" style="--tile-a:#065F46; --tile-b:#34D399;">SB</span>
+                        <strong>SBI Card</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Credit Card</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coverage -->
+        <section class="coverage">
+            <div class="container">
+                <div class="split">
+                    <div class="media-frame reveal">
+                        <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                            alt="Telecom tower against an open sky" loading="lazy" width="900" height="640">
+                    </div>
+                    <div>
+                        <span class="section-label" style="text-align: left;">Coverage</span>
+                        <h2>Every circle, every board, one counter</h2>
+                        <p class="text-muted mb-3">A provider only goes on this page once it is live end to end &mdash;
+                            we hold the integration back until top-ups post to the operator in real time, not overnight.
+                            That is why the list grows slowly and why nothing on it surprises you at checkout.</p>
+                        <p class="text-muted">Missing a board? Send it to us. Most new electricity and water boards go
+                            live within a fortnight of the first request.</p>
+                        <a href="contact.html" class="link-arrow mt-2">Request a provider <span>&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Missing Provider -->
+        <section class="cta-missing bg-alt band-glow">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h3 class="mb-2">Don't see your provider?</h3>
+                    <p>We are constantly adding new providers. Let us know if yours is missing and we'll get it live.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
+                    </a>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online, and at our neighbourhood store.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Mobile Recharge</a></li>
+                        <li><a href="services.html">DTH Recharge</a></li>
+                        <li><a href="services.html">Utility Bills</a></li>
+                        <li><a href="services.html">FASTag</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> ZapPay. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span><i data-lucide="shield-check"></i> PCI-DSS aligned</span>
+                    <span><i data-lucide="lock"></i> 256-bit encryption</span>
+                    <span><i data-lucide="badge-check"></i> Verified merchant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

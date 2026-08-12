@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of a bill calendar with automatic reminders">
+  <defs>
+    <linearGradient id="brBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#047857"/>
+      <stop offset="0.5" stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#134E4A"/>
+    </linearGradient>
+    <filter id="brBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="brCard" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#022C22" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="brClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#brClip)">
+    <rect width="640" height="400" fill="url(#brBg)"/>
+    <g filter="url(#brBlur)" opacity="0.5">
+      <circle cx="540" cy="70" r="120" fill="#34D399"/>
+      <circle cx="90" cy="340" r="110" fill="#6366F1"/>
+    </g>
+    <g opacity="0.14" stroke="#FFFFFF">
+      <path d="M0 80h640M0 160h640M0 240h640M0 320h640"/>
+    </g>
+
+    <g filter="url(#brCard)">
+      <rect x="188" y="72" width="264" height="256" rx="28" fill="#FFFFFF"/>
+    </g>
+    <rect x="188" y="72" width="264" height="56" rx="28" fill="#10B981"/>
+    <rect x="188" y="108" width="264" height="20" fill="#10B981"/>
+    <rect x="216" y="92" width="60" height="10" rx="5" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="392" y="92" width="34" height="10" rx="5" fill="#FFFFFF" opacity="0.5"/>
+
+    <g fill="#E7ECF3">
+      <rect x="216" y="150" width="34" height="30" rx="8"/>
+      <rect x="260" y="150" width="34" height="30" rx="8"/>
+      <rect x="304" y="150" width="34" height="30" rx="8"/>
+      <rect x="348" y="150" width="34" height="30" rx="8"/>
+      <rect x="392" y="150" width="34" height="30" rx="8"/>
+      <rect x="216" y="190" width="34" height="30" rx="8"/>
+      <rect x="260" y="190" width="34" height="30" rx="8"/>
+      <rect x="348" y="190" width="34" height="30" rx="8"/>
+      <rect x="392" y="190" width="34" height="30" rx="8"/>
+      <rect x="216" y="230" width="34" height="30" rx="8"/>
+      <rect x="304" y="230" width="34" height="30" rx="8"/>
+      <rect x="348" y="230" width="34" height="30" rx="8"/>
+      <rect x="392" y="230" width="34" height="30" rx="8"/>
+    </g>
+    <rect x="304" y="190" width="34" height="30" rx="8" fill="#10B981"/>
+    <rect x="260" y="230" width="34" height="30" rx="8" fill="#C7D2FE"/>
+    <rect x="216" y="280" width="140" height="10" rx="5" fill="#E7ECF3"/>
+    <rect x="216" y="300" width="96" height="8" rx="4" fill="#EFF3F8"/>
+
+    <!-- Reminder bell -->
+    <circle cx="452" cy="286" r="34" fill="#F59E0B"/>
+    <path d="M452 268c-9 0-16 7-16 16v10l-4 6h40l-4-6v-10c0-9-7-16-16-16z" fill="#FFFFFF"/>
+    <path d="M446 304a6 6 0 0012 0" fill="#FFFFFF"/>
+
+    <!-- Side chips -->
+    <g opacity="0.92">
+      <rect x="46" y="140" width="118" height="52" rx="18" fill="#FFFFFF" opacity="0.16"/>
+      <rect x="66" y="158" width="64" height="8" rx="4" fill="#FFFFFF" opacity="0.7"/>
+      <rect x="66" y="174" width="40" height="6" rx="3" fill="#FFFFFF" opacity="0.45"/>
+      <rect x="482" y="118" width="118" height="52" rx="18" fill="#FFFFFF" opacity="0.16"/>
+      <rect x="502" y="136" width="64" height="8" rx="4" fill="#FFFFFF" opacity="0.7"/>
+      <rect x="502" y="152" width="40" height="6" rx="3" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+  </g>
+</svg>

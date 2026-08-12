@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ZapPay</title>
+    <meta name="description" content="Contact ZapPay for general inquiries, support, or corporate/bulk recharge requirements.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg">
+    <link rel="apple-touch-icon" href="assets/img/logo-mark.svg">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      // Applied before first paint so a stored dark theme never flashes light.
+      (function(){try{var t=localStorage.getItem("zappay_theme");var d=localStorage.getItem("zappay_dir");var e=document.documentElement;if(t==="dark"){e.setAttribute("data-theme","dark");}else{e.removeAttribute("data-theme");}if(d){e.setAttribute("dir",d);}e.classList.add("js");}catch(err){}})();
+    </script>
+    <!-- GA_TAG -->
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <button class="drawer-close" aria-label="Close menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="operators.html">Operators</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="drawer-actions">
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+            <a href="login.html" class="btn btn-primary" style="flex: 1; text-align: center;">Login</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="operators.html">Operators</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="hamburger" aria-label="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container text-center">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Contact</span>
+                </nav>
+                <h1>Contact Us</h1>
+                <p class="lead" style="max-width: 620px; margin: 0 auto;">We're here to help. Get in touch for general support or bulk corporate requirements.</p>
+            </div>
+        </section>
+
+        <!-- Ways to reach us -->
+        <section class="contact-methods" style="padding-bottom: 0;">
+            <div class="container">
+                <div class="grid grid-3">
+                    <a href="tel:+12345678900" class="info-tile reveal">
+                        <span class="card-icon"><i data-lucide="phone"></i></span>
+                        <span>
+                            <strong>Call the store</strong>
+                            <p class="text-muted" style="margin: 2px 0 0; font-size: 0.9rem;">+1 234 567 8900 &middot; Mon&ndash;Sat, 9am&ndash;8pm</p>
+                        </span>
+                    </a>
+                    <a href="mailto:support@zappay.com" class="info-tile reveal">
+                        <span class="card-icon"><i data-lucide="mail"></i></span>
+                        <span>
+                            <strong>Email support</strong>
+                            <p class="text-muted" style="margin: 2px 0 0; font-size: 0.9rem;">support@zappay.com &middot; Replies within 4 hours</p>
+                        </span>
+                    </a>
+                    <a href="#corporate" class="info-tile reveal">
+                        <span class="card-icon"><i data-lucide="briefcase"></i></span>
+                        <span>
+                            <strong>Corporate sales</strong>
+                            <p class="text-muted" style="margin: 2px 0 0; font-size: 0.9rem;">Bulk recharge rates &amp; API access</p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start;">
+                    
+                    <!-- General Inquiry Form -->
+                    <div class="card" style="align-items: stretch; text-align: left;">
+                        <h3 class="mb-3" style="text-align: left;">General Inquiry</h3>
+                        <p class="text-muted mb-4">Facing an issue with a transaction? Send us a message.</p>
+                        
+                        <form class="validate-form" action="https://formspree.io/f/placeholder_general" method="POST" novalidate>
+                            <div class="form-success-msg">Your message has been sent successfully. We will get back to you soon.</div>
+                            <div class="form-inner">
+                                <div class="form-group">
+                                    <label class="form-label" for="g_name">Full Name *</label>
+                                    <input type="text" id="g_name" name="name" class="form-control" required placeholder="John Doe">
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="g_email">Email Address *</label>
+                                    <input type="email" id="g_email" name="email" class="form-control" required placeholder="john@example.com">
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="g_transaction">Transaction ID (Optional)</label>
+                                    <input type="text" id="g_transaction" name="transaction" class="form-control" placeholder="TXN123456789">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="g_message">Message *</label>
+                                    <textarea id="g_message" name="message" class="form-control" rows="4" required placeholder="How can we help you?"></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Store Info & Map -->
+                    <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+                        <div class="card" style="align-items: flex-start; text-align: left;">
+                            <h3 class="mb-3" style="text-align: left;">Our Store</h3>
+                            <ul style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+                                <li style="display: flex; gap: var(--space-2);">
+                                    <i data-lucide="map-pin" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                    <div>
+                                        <strong style="display: block; margin-bottom: 4px;">Address</strong>
+                                        <span class="text-muted">123 Tech Park, Financial District, City, Country 456001</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; gap: var(--space-2);">
+                                    <i data-lucide="phone" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                    <div>
+                                        <strong style="display: block; margin-bottom: 4px;">Phone</strong>
+                                        <span class="text-muted">+1 234 567 8900</span>
+                                    </div>
+                                </li>
+                                <li style="display: flex; gap: var(--space-2);">
+                                    <i data-lucide="mail" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                    <div>
+                                        <strong style="display: block; margin-bottom: 4px;">Email</strong>
+                                        <span class="text-muted">support@zappay.com</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <!-- Store Timings -->
+                            <div class="timings-banner" style="margin-top: var(--space-4); width: 100%; text-align: left; justify-content: flex-start;">
+                                <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+                                <div>
+                                    <p style="font-size: 0.95rem;"><strong>Store Hours:</strong> Mon-Sat | 9:00 AM - 8:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="card" style="padding: 0; overflow: hidden; height: 250px;">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531590464!3d-37.81720974201389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Recharge Inquiry Form -->
+        <section id="corporate" class="corporate-section bg-alt" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); padding: var(--space-6) 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Corporate / Bulk Recharge</h2>
+                    <p>Dedicated plans and APIs for businesses. Fill out the form below and our sales team will contact you.</p>
+                </div>
+                
+                <div class="card" style="max-width: 800px; margin: 0 auto; align-items: stretch; text-align: left;">
+                    <form class="validate-form" action="https://formspree.io/f/placeholder_corporate" method="POST" novalidate>
+                        <div class="form-success-msg">Your corporate inquiry has been submitted. Our sales team will contact you shortly.</div>
+                        <div class="form-inner">
+                            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-3);">
+                                <div class="form-group">
+                                    <label class="form-label" for="c_company">Company Name *</label>
+                                    <input type="text" id="c_company" name="company" class="form-control" required placeholder="Acme Corp">
+                                    <div class="invalid-feedback">Please enter your company name.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="c_person">Contact Person *</label>
+                                    <input type="text" id="c_person" name="person" class="form-control" required placeholder="Jane Doe">
+                                    <div class="invalid-feedback">Please enter contact person name.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-3);">
+                                <div class="form-group">
+                                    <label class="form-label" for="c_email">Work Email *</label>
+                                    <input type="email" id="c_email" name="email" class="form-control" required placeholder="jane@acme.com">
+                                    <div class="invalid-feedback">Please enter a valid work email.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="c_phone">Phone Number *</label>
+                                    <input type="tel" id="c_phone" name="phone" class="form-control" required placeholder="1234567890">
+                                    <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                                </div>
+                            </div>
+
+                            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-3);">
+                                <div class="form-group">
+                                    <label class="form-label" for="c_volume">Estimated Monthly Volume (Transactions) *</label>
+                                    <select id="c_volume" name="volume" class="form-control" required style="appearance: none;">
+                                        <option value="">Select Volume</option>
+                                        <option value="10-100">10 - 100</option>
+                                        <option value="100-500">100 - 500</option>
+                                        <option value="500-1000">500 - 1000</option>
+                                        <option value="1000+">1000+</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select an estimated volume.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="c_type">Primary Service Needed *</label>
+                                    <select id="c_type" name="type" class="form-control" required style="appearance: none;">
+                                        <option value="">Select Service</option>
+                                        <option value="Mobile Recharge">Mobile Recharge</option>
+                                        <option value="DTH">DTH</option>
+                                        <option value="FASTag">FASTag</option>
+                                        <option value="Multiple">Multiple Services</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a primary service.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="c_message">Additional Requirements</label>
+                                <textarea id="c_message" name="message" class="form-control" rows="3" placeholder="Any specific APIs or custom solutions needed?"></textarea>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary" style="min-width: 200px;">Submit Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
+                    </a>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online, and at our neighbourhood store.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Mobile Recharge</a></li>
+                        <li><a href="services.html">DTH Recharge</a></li>
+                        <li><a href="services.html">Utility Bills</a></li>
+                        <li><a href="services.html">FASTag</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> ZapPay. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span><i data-lucide="shield-check"></i> PCI-DSS aligned</span>
+                    <span><i data-lucide="lock"></i> 256-bit encryption</span>
+                    <span><i data-lucide="badge-check"></i> Verified merchant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

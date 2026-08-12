@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" fill="none" role="img" aria-labelledby="zpStoreTitle">
+  <title id="zpStoreTitle">The ZapPay neighbourhood recharge and bill payment store</title>
+  <defs>
+    <linearGradient id="stBrand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="stSky" x1="320" y1="0" x2="320" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="stGlass" x1="180" y1="150" x2="420" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DBEAFE"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="stMint" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="stBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="stCard" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#1E1B4B" flood-opacity="0.14"/>
+    </filter>
+    <clipPath id="stFrame">
+      <rect width="640" height="460" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#stFrame)">
+    <rect width="640" height="460" fill="url(#stSky)"/>
+    <g filter="url(#stBlur)" opacity="0.55">
+      <circle cx="120" cy="90" r="90" fill="#C7D2FE"/>
+      <circle cx="546" cy="120" r="80" fill="#A7F3D0"/>
+      <circle cx="560" cy="380" r="70" fill="#DDD6FE"/>
+    </g>
+
+    <!-- Ground -->
+    <rect x="0" y="368" width="640" height="92" fill="#EAEEF7"/>
+    <rect x="0" y="366" width="640" height="3" fill="#DDE3EF"/>
+
+    <!-- Facade -->
+    <rect x="128" y="96" width="384" height="272" rx="18" fill="#FFFFFF"/>
+    <rect x="128.5" y="96.5" width="383" height="271" rx="17.5" stroke="#E3E8F2"/>
+
+    <!-- Sign board -->
+    <rect x="176" y="60" width="288" height="56" rx="18" fill="url(#stBrand)"/>
+    <rect x="176" y="60" width="288" height="28" rx="14" fill="#FFFFFF" opacity="0.12"/>
+    <path d="M212 74l-11 16h7l-2 13 12-17h-7z" fill="#FFFFFF"/>
+    <text x="232" y="96" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="22" font-weight="500" fill="#FFFFFF">ZapPay Recharge Shop</text>
+
+    <!-- Awning -->
+    <path d="M136 128h368l16 40H120z" fill="#EEF2FF"/>
+    <path d="M136 128h46l-6 40h-56z" fill="url(#stBrand)" opacity="0.9"/>
+    <path d="M228 128h46l-2 40h-50z" fill="url(#stBrand)" opacity="0.9"/>
+    <path d="M320 128h46l2 40h-50z" fill="url(#stBrand)" opacity="0.9"/>
+    <path d="M412 128h46l10 40h-54z" fill="url(#stBrand)" opacity="0.9"/>
+    <rect x="120" y="166" width="400" height="8" rx="4" fill="#DDE3EF"/>
+
+    <!-- Window -->
+    <rect x="160" y="196" width="196" height="132" rx="14" fill="url(#stGlass)"/>
+    <rect x="160.5" y="196.5" width="195" height="131" rx="13.5" stroke="#CBD5E1"/>
+    <path d="M176 328l72-132h26l-72 132z" fill="#FFFFFF" opacity="0.45"/>
+    <path d="M236 328l72-132h14l-72 132z" fill="#FFFFFF" opacity="0.3"/>
+
+    <!-- Counter inside window -->
+    <rect x="180" y="276" width="156" height="52" rx="10" fill="#FFFFFF" opacity="0.75"/>
+    <rect x="196" y="248" width="52" height="30" rx="8" fill="#0B1020"/>
+    <rect x="200" y="252" width="44" height="22" rx="5" fill="#6366F1"/>
+    <circle cx="290" cy="252" r="16" fill="#C7D2FE"/>
+    <rect x="272" y="272" width="36" height="30" rx="12" fill="#818CF8"/>
+
+    <!-- Door -->
+    <rect x="380" y="196" width="100" height="172" rx="12" fill="#F1F5F9"/>
+    <rect x="380.5" y="196.5" width="99" height="171" rx="11.5" stroke="#D8DFEA"/>
+    <rect x="394" y="212" width="72" height="92" rx="8" fill="url(#stGlass)"/>
+    <circle cx="404" cy="330" r="5" fill="#94A3B8"/>
+    <rect x="392" y="344" width="76" height="6" rx="3" fill="#E2E8F0"/>
+
+    <!-- Open sign -->
+    <rect x="404" y="228" width="52" height="20" rx="10" fill="url(#stMint)"/>
+    <text x="430" y="243" text-anchor="middle" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="500" fill="#FFFFFF">OPEN</text>
+
+    <!-- Planters -->
+    <rect x="96" y="326" width="40" height="42" rx="10" fill="#C7D2FE"/>
+    <path d="M116 326c-16-6-22-22-18-38 16 2 24 16 22 32 8-12 22-16 34-10-6 14-22 22-38 16z" fill="#34D399"/>
+    <rect x="512" y="318" width="44" height="50" rx="12" fill="#DDD6FE"/>
+    <path d="M534 318c-18-8-24-26-18-44 18 4 26 20 24 38 8-14 24-18 38-10-8 16-24 24-44 16z" fill="#10B981"/>
+
+    <!-- Floating receipt card -->
+    <g filter="url(#stCard)">
+      <rect x="40" y="150" width="164" height="76" rx="20" fill="#FFFFFF"/>
+    </g>
+    <circle cx="72" cy="188" r="18" fill="url(#stMint)"/>
+    <path d="M65 188.5l5 5 9-9" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="100" y="176" width="82" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="100" y="192" width="54" height="6" rx="3" fill="#EDF1F6"/>
+
+    <!-- Floating queue-free card -->
+    <g filter="url(#stCard)">
+      <rect x="452" y="248" width="164" height="80" rx="20" fill="#FFFFFF"/>
+    </g>
+    <rect x="472" y="268" width="30" height="30" rx="10" fill="#EEF2FF"/>
+    <path d="M487 274v9l6 4" stroke="#6366F1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="514" y="270" width="84" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="514" y="286" width="56" height="6" rx="3" fill="#EDF1F6"/>
+    <rect x="472" y="308" width="126" height="6" rx="3" fill="#F1F5F9"/>
+
+    <!-- Customer -->
+    <circle cx="286" cy="322" r="17" fill="#F8CBA6"/>
+    <path d="M286 302c-10 0-16 5-16 12h32c0-7-6-12-16-12z" fill="#0F172A"/>
+    <path d="M262 400c0-16 11-28 24-28s24 12 24 28v20h-48z" fill="#4F46E5"/>
+    <rect x="300" y="352" width="26" height="34" rx="12" fill="#F8CBA6"/>
+    <rect x="304" y="344" width="22" height="30" rx="7" fill="#0B1020"/>
+    <rect x="307" y="348" width="16" height="22" rx="4" fill="#818CF8"/>
+  </g>
+</svg>

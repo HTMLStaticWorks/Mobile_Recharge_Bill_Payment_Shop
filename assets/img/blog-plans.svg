@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration comparing prepaid mobile plans">
+  <defs>
+    <linearGradient id="bpBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B45309"/>
+      <stop offset="0.5" stop-color="#9A3412"/>
+      <stop offset="1" stop-color="#4C1D95"/>
+    </linearGradient>
+    <filter id="bpBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="bpCard" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#431407" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="bpClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#bpClip)">
+    <rect width="640" height="400" fill="url(#bpBg)"/>
+    <g filter="url(#bpBlur)" opacity="0.5">
+      <circle cx="120" cy="70" r="110" fill="#FBBF24"/>
+      <circle cx="560" cy="340" r="120" fill="#A78BFA"/>
+    </g>
+    <g opacity="0.14" stroke="#FFFFFF">
+      <circle cx="320" cy="200" r="180"/>
+      <circle cx="320" cy="200" r="130"/>
+      <circle cx="320" cy="200" r="80"/>
+    </g>
+
+    <!-- Plan cards -->
+    <g filter="url(#bpCard)">
+      <rect x="72" y="140" width="150" height="180" rx="24" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+    <rect x="96" y="168" width="60" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="96" y="192" width="86" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="96" y="226" width="102" height="8" rx="4" fill="#EDF1F6"/>
+    <rect x="96" y="244" width="78" height="8" rx="4" fill="#EDF1F6"/>
+    <rect x="96" y="278" width="102" height="22" rx="11" fill="#EEF2FF"/>
+
+    <g filter="url(#bpCard)">
+      <rect x="238" y="104" width="164" height="216" rx="26" fill="#FFFFFF"/>
+    </g>
+    <rect x="238" y="104" width="164" height="52" rx="26" fill="#7C3AED"/>
+    <rect x="238" y="134" width="164" height="22" fill="#7C3AED"/>
+    <rect x="266" y="122" width="66" height="10" rx="5" fill="#FFFFFF" opacity="0.85"/>
+    <text x="266" y="204" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="30" font-weight="500" fill="#0F172A">&#8377;299</text>
+    <rect x="266" y="224" width="108" height="8" rx="4" fill="#E7ECF3"/>
+    <rect x="266" y="242" width="80" height="8" rx="4" fill="#EFF3F8"/>
+    <rect x="266" y="274" width="108" height="26" rx="13" fill="#7C3AED"/>
+
+    <g filter="url(#bpCard)">
+      <rect x="418" y="140" width="150" height="180" rx="24" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+    <rect x="442" y="168" width="60" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="442" y="192" width="86" height="16" rx="8" fill="#CBD5E1"/>
+    <rect x="442" y="226" width="102" height="8" rx="4" fill="#EDF1F6"/>
+    <rect x="442" y="244" width="78" height="8" rx="4" fill="#EDF1F6"/>
+    <rect x="442" y="278" width="102" height="22" rx="11" fill="#EEF2FF"/>
+
+    <!-- Signal badge -->
+    <circle cx="320" cy="70" r="30" fill="#FBBF24"/>
+    <g stroke="#FFFFFF" stroke-width="4" stroke-linecap="round">
+      <path d="M308 78v-6"/>
+      <path d="M316 78v-12"/>
+      <path d="M324 78v-18"/>
+      <path d="M332 78v-24"/>
+    </g>
+  </g>
+</svg>

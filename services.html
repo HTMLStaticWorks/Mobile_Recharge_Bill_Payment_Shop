@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ZapPay</title>
+    <meta name="description" content="Explore ZapPay services: Mobile recharges, DTH, electricity, water, gas, and broadband bill payments.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg">
+    <link rel="apple-touch-icon" href="assets/img/logo-mark.svg">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      // Applied before first paint so a stored dark theme never flashes light.
+      (function(){try{var t=localStorage.getItem("zappay_theme");var d=localStorage.getItem("zappay_dir");var e=document.documentElement;if(t==="dark"){e.setAttribute("data-theme","dark");}else{e.removeAttribute("data-theme");}if(d){e.setAttribute("dir",d);}e.classList.add("js");}catch(err){}})();
+    </script>
+    <!-- GA_TAG -->
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <button class="drawer-close" aria-label="Close menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="operators.html">Operators</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="drawer-actions">
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+            <a href="login.html" class="btn btn-primary" style="flex: 1; text-align: center;">Login</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="operators.html">Operators</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="hamburger" aria-label="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container text-center">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Services</span>
+                </nav>
+                <h1>Our Services</h1>
+                <p class="lead" style="max-width: 620px; margin: 0 auto;">Comprehensive payment solutions tailored for your convenience.</p>
+            </div>
+        </section>
+
+        <!-- Recharge Services -->
+        <section class="services-group">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Recharge</span>
+                    <h2>Recharge Services</h2>
+                    <p>Instant top-ups for your mobile, DTH, and data cards.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Person holding a smartphone" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="smartphone"></i></div>
+                        <h3 class="card-title">Prepaid Mobile</h3>
+                        <p>Instant recharge for all telecom circles. Access to the latest plans and offers.</p>
+                        <div class="price-figure mt-4 mb-2">From ₹19</div>
+                        <a href="operators.html" class="btn btn-outline">Recharge Now</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Television screen in a living room" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="tv"></i></div>
+                        <h3 class="card-title">DTH Recharge</h3>
+                        <p>Keep your entertainment uninterrupted. Support for Tata Play, Airtel DTH, Dish TV, and more.</p>
+                        <div class="price-figure mt-4 mb-2">From ₹99</div>
+                        <a href="operators.html" class="btn btn-outline">Pay DTH</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Portable data dongle and modem" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="wifi"></i></div>
+                        <h3 class="card-title">Data Cards</h3>
+                        <p>4G/5G data dongle recharges for continuous on-the-go connectivity.</p>
+                        <div class="price-figure mt-4 mb-2">From ₹49</div>
+                        <a href="operators.html" class="btn btn-outline">Recharge Data</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utility Bill Payments -->
+        <section class="services-group bg-alt band-glow">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Utilities</span>
+                    <h2>Utility Bill Payments</h2>
+                    <p>Secure and timely payments for all your household and business utilities.</p>
+                </div>
+                <div class="grid grid-4">
+                    <div class="card reveal">
+                        <div class="card-icon"><i data-lucide="lightbulb"></i></div>
+                        <h3 class="card-title">Electricity</h3>
+                        <p>Pay bills across 50+ state electricity boards instantly.</p>
+                        <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i data-lucide="droplet"></i></div>
+                        <h3 class="card-title">Water</h3>
+                        <p>Clear your municipal water board dues securely online.</p>
+                        <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i data-lucide="flame"></i></div>
+                        <h3 class="card-title">Gas Pipe</h3>
+                        <p>Pay for your piped gas connections seamlessly.</p>
+                        <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i data-lucide="phone-call"></i></div>
+                        <h3 class="card-title">Postpaid Mobile</h3>
+                        <p>Settle your postpaid bills before the due date effortlessly.</p>
+                        <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i data-lucide="car"></i></div>
+                        <h3 class="card-title">FASTag</h3>
+                        <p>Top up your vehicle FASTag for smooth toll transitions.</p>
+                        <a href="operators.html" class="btn btn-outline">Pay FASTag</a>
+                    </div>
+                    <div class="card reveal">
+                        <div class="card-icon"><i data-lucide="monitor"></i></div>
+                        <h3 class="card-title">Broadband</h3>
+                        <p>Pay internet bills for JioFiber, Airtel Xstream, and others.</p>
+                        <a href="operators.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate / Bulk Recharge -->
+        <section class="services-group" id="corporate">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Corporate</span>
+                    <h2>Corporate &amp; bulk recharge</h2>
+                    <p>Recharge every connection on your books in one go &mdash; move the sliders to see what a cycle
+                        would cost your team.</p>
+                </div>
+
+                <div class="bulk-calc reveal" data-bulk-calc>
+                    <div class="bulk-controls">
+                        <div class="form-group">
+                            <label class="form-label" for="bulk_count">Connections to recharge</label>
+                            <div class="range-row">
+                                <input type="range" id="bulk_count" class="range" min="10" max="1000" step="10"
+                                    value="120" data-bulk-count>
+                                <output class="range-out" for="bulk_count" data-out-count>120</output>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="bulk_plan">Plan per connection</label>
+                            <select id="bulk_plan" class="form-control" data-bulk-plan>
+                                <option value="239">&#8377;239 &mdash; 1.5 GB/day, 28 days</option>
+                                <option value="299" selected>&#8377;299 &mdash; 2 GB/day, 28 days</option>
+                                <option value="399">&#8377;399 &mdash; 2.5 GB/day, 28 days</option>
+                                <option value="666">&#8377;666 &mdash; 1.5 GB/day, 84 days</option>
+                                <option value="859">&#8377;859 &mdash; 2 GB/day, 84 days</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="form-label" id="bulk_cycle_label">Billing cycle</span>
+                            <div class="seg" role="group" aria-labelledby="bulk_cycle_label">
+                                <button type="button" class="seg-btn" data-cycles="1" data-label="Per month"
+                                    aria-pressed="true">Monthly</button>
+                                <button type="button" class="seg-btn" data-cycles="3" data-label="Per quarter"
+                                    aria-pressed="false">Quarterly</button>
+                                <button type="button" class="seg-btn" data-cycles="12" data-label="Per year"
+                                    aria-pressed="false">Annual</button>
+                            </div>
+                        </div>
+
+                        <ul class="tier-list" aria-label="Volume discount slabs">
+                            <li class="tier" data-tier-min="10"><span>10 &ndash; 49 connections</span>
+                                <strong>3% off</strong>
+                            </li>
+                            <li class="tier" data-tier-min="50"><span>50 &ndash; 199 connections</span>
+                                <strong>6% off</strong>
+                            </li>
+                            <li class="tier" data-tier-min="200"><span>200 &ndash; 499 connections</span>
+                                <strong>9% off</strong>
+                            </li>
+                            <li class="tier" data-tier-min="500"><span>500+ connections</span>
+                                <strong>12% off</strong>
+                            </li>
+                        </ul>
+
+                        <ul class="bulk-perks">
+                            <li><i data-lucide="file-text"></i> One consolidated GST invoice per cycle</li>
+                            <li><i data-lucide="user-round-check"></i> Named account manager on call</li>
+                            <li><i data-lucide="upload"></i> Bulk upload by CSV, or push via our API</li>
+                            <li><i data-lucide="bell-ring"></i> Expiry reminders before anything lapses</li>
+                        </ul>
+                    </div>
+
+                    <aside class="bulk-summary">
+                        <span class="section-label">Your estimate</span>
+                        <div class="bulk-total" data-out-total aria-live="polite">&#8377;33,727</div>
+                        <p class="bulk-total-note" data-out-note>Per month for 120 connections</p>
+
+                        <dl class="summary-rows">
+                            <div class="summary-row">
+                                <dt>List price</dt>
+                                <dd data-out-list>&#8377;35,880</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Corporate discount</dt>
+                                <dd data-out-rate>6%</dd>
+                            </div>
+                            <div class="summary-row is-save">
+                                <dt>You save</dt>
+                                <dd data-out-save>&minus; &#8377;2,153</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Effective per connection</dt>
+                                <dd data-out-each>&#8377;281</dd>
+                            </div>
+                        </dl>
+
+                        <a href="contact.html#corporate" class="btn btn-primary btn-block">Request a formal quote</a>
+                        <p class="bulk-disclaimer">Indicative only. Final rates are confirmed on your signed
+                            agreement.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta bg-alt band-glow">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2 class="mb-2">Can't find the service you need?</h2>
+                    <p>Tell us which provider you're after &mdash; we add new boards and operators every week.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Request a Provider</a>
+                        <a href="operators.html" class="btn btn-outline btn-lg">See All Providers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
+                    </a>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online, and at our neighbourhood store.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Mobile Recharge</a></li>
+                        <li><a href="services.html">DTH Recharge</a></li>
+                        <li><a href="services.html">Utility Bills</a></li>
+                        <li><a href="services.html">FASTag</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> ZapPay. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span><i data-lucide="shield-check"></i> PCI-DSS aligned</span>
+                    <span><i data-lucide="lock"></i> 256-bit encryption</span>
+                    <span><i data-lucide="badge-check"></i> Verified merchant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

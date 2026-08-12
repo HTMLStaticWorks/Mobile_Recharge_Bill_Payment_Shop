@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapPay - Online Payments & Recharge</title>
+    <meta name="description" content="ZapPay provides lightning-fast mobile recharge, DTH, and utility bill payments. Secure, instant, and zero extra charges.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg">
+    <link rel="apple-touch-icon" href="assets/img/logo-mark.svg">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      // Applied before first paint so a stored dark theme never flashes light.
+      (function(){try{var t=localStorage.getItem("zappay_theme");var d=localStorage.getItem("zappay_dir");var e=document.documentElement;if(t==="dark"){e.setAttribute("data-theme","dark");}else{e.removeAttribute("data-theme");}if(d){e.setAttribute("dir",d);}e.classList.add("js");}catch(err){}})();
+    </script>
+    <!-- GA_TAG -->
+    <style>
+        .hero-2 {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: clamp(56px, 7vw, 112px) 0 clamp(48px, 6vw, 96px);
+            text-align: center;
+        }
+        .hero-2::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(34rem 22rem at 18% 6%, var(--tint-primary-14), transparent 62%),
+                radial-gradient(30rem 20rem at 84% 0%, rgba(139, 92, 246, 0.16), transparent 62%),
+                radial-gradient(30rem 20rem at 50% 108%, var(--tint-accent-10), transparent 62%);
+        }
+        .hero-2::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+            background-size: 58px 58px;
+            opacity: 0.5;
+            -webkit-mask-image: radial-gradient(68% 62% at 50% 26%, #000 8%, transparent 76%);
+            mask-image: radial-gradient(68% 62% at 50% 26%, #000 8%, transparent 76%);
+        }
+        .hero-2 .container { position: relative; z-index: 1; }
+        .hero-2 h1 .gradient-text {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Shortcut chips under the quick-pay bar */
+        .quick-chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: var(--space-3);
+        }
+        .quick-chips a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            border-radius: var(--radius-pill);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 0.88rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .quick-chips a:hover {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+        .quick-chips svg,
+        .quick-chips i { width: 16px; height: 16px; }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Drawer Overlay -->
+    <div class="drawer-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <button class="drawer-close" aria-label="Close menu">
+            <i data-lucide="x"></i>
+        </button>
+        <nav class="drawer-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html" class="active">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="operators.html">Operators</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="drawer-actions">
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                <i data-lucide="moon"></i>
+            </button>
+            <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                <i data-lucide="arrow-left-right"></i>
+            </button>
+            <a href="login.html" class="btn btn-primary" style="flex: 1; text-align: center;">Login</a>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html" class="active">Home 2</a>
+                <a href="services.html">Services</a>
+                <a href="operators.html">Operators</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button class="hamburger" aria-label="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section 2 -->
+        <section class="hero-2">
+            <div class="container">
+                <span class="eyebrow"><i data-lucide="rocket"></i> The new standard in digital payments</span>
+
+                <h1 class="mb-3">Powering your <span class="gradient-text">daily payments</span>.</h1>
+                <p class="lead hero-lead">From mobile plans to utility bills, manage every essential expense in one place &mdash; with zero friction and zero convenience fees.</p>
+
+                <!-- Quick Recharge Form / Search (Visual Mockup) -->
+                <form class="quick-pay" action="services.html" role="search">
+                    <label class="form-label" for="quick_number" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Mobile or consumer number</label>
+                    <input type="text" id="quick_number" class="form-control" placeholder="Enter mobile or consumer number&hellip;" style="flex: 1;">
+                    <button type="submit" class="btn btn-primary">Proceed <i data-lucide="arrow-right"></i></button>
+                </form>
+
+                <div class="quick-chips">
+                    <a href="services.html"><i data-lucide="smartphone"></i> Mobile</a>
+                    <a href="services.html"><i data-lucide="tv"></i> DTH</a>
+                    <a href="services.html"><i data-lucide="lightbulb"></i> Electricity</a>
+                    <a href="services.html"><i data-lucide="wifi"></i> Broadband</a>
+                    <a href="services.html"><i data-lucide="car"></i> FASTag</a>
+                </div>
+
+                <div class="stat-strip reveal" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <div class="stat">
+                        <div class="stat-value" data-count="1.8" data-suffix="s">1.8s</div>
+                        <p class="stat-label">Average confirmation</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="100" data-suffix="+">100+</div>
+                        <p class="stat-label">Providers supported</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-count="99.9" data-suffix="%">99.9%</div>
+                        <p class="stat-label">Success rate</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">24/7</div>
+                        <p class="stat-label">Always online</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Operators Grid (Moved to top for Home 2) -->
+        <section class="operators" style="padding-top: var(--space-6);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">One tap to start</span>
+                    <h2>Select Your Provider</h2>
+                    <p>Click on any provider to initiate a quick payment.</p>
+                </div>
+                <div class="grid grid-6 text-center">
+                    <a href="services.html" class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Mobile network SIM card" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#1D4ED8; --tile-b:#3B82F6;">Ji</span>
+                        <strong>Jio</strong>
+                        <p>Prepaid &amp; Postpaid</p>
+                    </a>
+                    <a href="services.html" class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Mobile phone on a plain background" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#DC2626; --tile-b:#F87171;">Ai</span>
+                        <strong>Airtel</strong>
+                        <p>Prepaid &amp; Postpaid</p>
+                    </a>
+                    <a href="services.html" class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Connected devices on a desk" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#BE123C; --tile-b:#FB7185;">Vi</span>
+                        <strong>Vi</strong>
+                        <p>Prepaid &amp; Postpaid</p>
+                    </a>
+                    <a href="services.html" class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Satellite dish against the sky" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#6D28D9; --tile-b:#A855F7;">TP</span>
+                        <strong>Tata Play</strong>
+                        <p>DTH</p>
+                    </a>
+                    <a href="services.html" class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Running water from a tap" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#0E7490; --tile-b:#22D3EE;">WB</span>
+                        <strong>Water Board</strong>
+                        <p>Utility</p>
+                    </a>
+                    <a href="services.html" class="card card-compact reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                                alt="Gas pipeline fittings" loading="lazy" width="500" height="300">
+                        </div>
+                        <span class="brand-tile" style="--tile-a:#EA580C; --tile-b:#F59E0B;">GP</span>
+                        <strong>Gas Pipe</strong>
+                        <p>Utility</p>
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="operators.html" class="btn btn-outline">Explore All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services bg-alt band-glow">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">More services</span>
+                    <h2>Beyond the monthly recharge</h2>
+                    <p>The everyday payments that are easy to forget &mdash; handled in the same two taps.</p>
+                </div>
+                <div class="grid grid-4">
+                    <!-- Data Card -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Wireless modem and data dongle" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="wifi"></i></div>
+                        <h3 class="card-title">Data Cards</h3>
+                        <p>Recharge your 4G/5G data dongles instantly.</p>
+                        <a href="services.html" class="btn btn-outline">Recharge</a>
+                    </div>
+                    <!-- FASTag -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Car on an open highway" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="car"></i></div>
+                        <h3 class="card-title">FASTag</h3>
+                        <p>Keep your FASTag topped up for smooth travels.</p>
+                        <a href="services.html" class="btn btn-outline">Pay FASTag</a>
+                    </div>
+                    <!-- Landline -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Desk telephone handset" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="phone-call"></i></div>
+                        <h3 class="card-title">Landline</h3>
+                        <p>Pay fixed line bills for all state providers securely.</p>
+                        <a href="services.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                    <!-- Credit Card -->
+                    <div class="card reveal">
+                        <div class="card-media">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                                alt="Credit cards laid out on a surface" loading="lazy" width="800" height="500">
+                        </div>
+                        <div class="card-icon"><i data-lucide="credit-card"></i></div>
+                        <h3 class="card-title">Credit Card</h3>
+                        <p>Settle your credit card bills on time, every time.</p>
+                        <a href="services.html" class="btn btn-outline">Pay Bill</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Try It Live -->
+        <section class="try-it">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Try it live</span>
+                    <h2>Walk through a recharge, right here</h2>
+                    <p>Three steps, exactly as they run on the real thing &mdash; except nothing gets charged.</p>
+                </div>
+
+                <div class="simulator reveal" data-simulator>
+                    <!-- Progress rail -->
+                    <div class="sim-rail" aria-hidden="true">
+                        <span class="sim-node is-current" data-sim-node>
+                            <span class="dot">1</span> <span>Service</span>
+                        </span>
+                        <span class="sim-bar"><span data-sim-bar></span></span>
+                        <span class="sim-node" data-sim-node>
+                            <span class="dot">2</span> <span>Details</span>
+                        </span>
+                        <span class="sim-bar"><span data-sim-bar></span></span>
+                        <span class="sim-node" data-sim-node>
+                            <span class="dot">3</span> <span>Plan</span>
+                        </span>
+                        <span class="sim-bar"><span data-sim-bar></span></span>
+                        <span class="sim-node" data-sim-node>
+                            <span class="dot"><i data-lucide="check"></i></span> <span>Done</span>
+                        </span>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="sim-panel" data-sim-panel>
+                        <h3>What are you paying for?</h3>
+                        <div class="choice-grid">
+                            <button type="button" class="choice" data-sim-service="mobile" aria-pressed="false">
+                                <i data-lucide="smartphone"></i> Mobile
+                            </button>
+                            <button type="button" class="choice" data-sim-service="dth" aria-pressed="false">
+                                <i data-lucide="tv"></i> DTH
+                            </button>
+                            <button type="button" class="choice" data-sim-service="broadband" aria-pressed="false">
+                                <i data-lucide="wifi"></i> Broadband
+                            </button>
+                            <button type="button" class="choice" data-sim-service="datacard" aria-pressed="false">
+                                <i data-lucide="router"></i> Data Card
+                            </button>
+                        </div>
+                        <p class="sim-hint">Pick one to continue &mdash; this is a demo, so no payment is taken.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="sim-panel" data-sim-panel hidden>
+                        <h3>Who are we paying?</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="sim_operator">Operator</label>
+                            <select id="sim_operator" class="form-control" data-sim-operator></select>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label class="form-label" for="sim_number" data-sim-field>Mobile number</label>
+                            <input type="text" id="sim_number" class="form-control" inputmode="numeric"
+                                autocomplete="off" placeholder="Enter your mobile number" data-sim-number>
+                            <p class="invalid-feedback" role="alert" data-sim-error></p>
+                            <p class="sim-hint" data-sim-hint></p>
+                        </div>
+                        <div class="sim-actions">
+                            <button type="button" class="btn btn-ghost" data-sim-back>
+                                <i data-lucide="arrow-left"></i> Back
+                            </button>
+                            <button type="button" class="btn btn-primary" data-sim-continue>
+                                Continue <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="sim-panel" data-sim-panel hidden>
+                        <h3>Choose a plan</h3>
+                        <div class="plan-rows" data-sim-plans></div>
+                        <div class="sim-actions">
+                            <button type="button" class="btn btn-ghost" data-sim-back>
+                                <i data-lucide="arrow-left"></i> Back
+                            </button>
+                            <button type="button" class="btn btn-primary" data-sim-pay disabled>Confirm
+                                payment</button>
+                        </div>
+                    </div>
+
+                    <!-- Receipt -->
+                    <div class="sim-panel sim-receipt" data-sim-panel hidden>
+                        <div class="sim-tick"><i data-lucide="check"></i></div>
+                        <h3>Recharge successful</h3>
+                        <p class="text-muted">A receipt would land in your inbox within seconds.</p>
+
+                        <dl class="receipt-rows">
+                            <div class="receipt-row">
+                                <dt>Service</dt>
+                                <dd data-receipt-service></dd>
+                            </div>
+                            <div class="receipt-row">
+                                <dt>Operator</dt>
+                                <dd data-receipt-operator></dd>
+                            </div>
+                            <div class="receipt-row">
+                                <dt>Number</dt>
+                                <dd data-receipt-number></dd>
+                            </div>
+                            <div class="receipt-row">
+                                <dt>Plan</dt>
+                                <dd data-receipt-plan></dd>
+                            </div>
+                            <div class="receipt-row">
+                                <dt>Reference</dt>
+                                <dd data-receipt-ref></dd>
+                            </div>
+                            <div class="receipt-row">
+                                <dt>Completed</dt>
+                                <dd data-receipt-time></dd>
+                            </div>
+                            <div class="receipt-row is-total">
+                                <dt>Amount paid</dt>
+                                <dd data-receipt-amount></dd>
+                            </div>
+                        </dl>
+
+                        <div class="sim-actions">
+                            <button type="button" class="btn btn-outline" data-sim-restart>
+                                <i data-lucide="rotate-ccw"></i> Run it again
+                            </button>
+                            <a href="services.html" class="btn btn-primary">Do it for real</a>
+                        </div>
+                        <p class="sim-hint">Demo only &mdash; no money moved and no account was contacted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Timings -->
+        <section class="timings" style="padding-top: 0;">
+            <div class="container">
+                <div class="timings-banner">
+                    <i data-lucide="store" style="width: 32px; height: 32px;"></i>
+                    <div>
+                        <p><strong>Offline Store Timings:</strong> Monday - Saturday | 9:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials bg-alt band-glow">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Testimonials</span>
+                    <h2>What our customers say</h2>
+                    <p>Trusted by thousands for their daily recharges and bill payments.</p>
+                </div>
+
+                <div class="tcarousel reveal" data-carousel role="region" aria-roledescription="carousel"
+                    aria-label="Customer testimonials" tabindex="0">
+                    <div class="tcarousel-viewport">
+                        <div class="tcarousel-track" data-carousel-track>
+                            <div class="tcarousel-slide" data-carousel-slide>
+                                <div class="quote-card">
+                                    <span class="stars" aria-label="Rated 5 out of 5">
+                                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                            data-lucide="star"></i><i data-lucide="star"></i>
+                                    </span>
+                                    <p>I ran a recharge at 2am when my data died mid-deadline. It went through before I
+                                        could switch tabs. That is the whole review.</p>
+                                    <div class="quote-author">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
+                                            alt="" width="46" height="46" loading="lazy">
+                                        <span>
+                                            <span class="name">Rahul S.</span><br>
+                                            <span class="role">Pays 4 bills a month</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tcarousel-slide" data-carousel-slide>
+                                <div class="quote-card">
+                                    <span class="stars" aria-label="Rated 5 out of 5">
+                                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                            data-lucide="star"></i><i data-lucide="star"></i>
+                                    </span>
+                                    <p>We top up 60 staff connections every month. What used to be a full morning of
+                                        work is now one upload and one invoice.</p>
+                                    <div class="quote-author">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
+                                            alt="" width="46" height="46" loading="lazy">
+                                        <span>
+                                            <span class="name">Anita K.</span><br>
+                                            <span class="role">Retail business owner</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tcarousel-slide" data-carousel-slide>
+                                <div class="quote-card">
+                                    <span class="stars" aria-label="Rated 5 out of 5">
+                                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                            data-lucide="star"></i><i data-lucide="star"></i>
+                                    </span>
+                                    <p>Other apps quote one price and charge another at the last screen. Here the number
+                                        I tap is the number that leaves my account.</p>
+                                    <div class="quote-author">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
+                                            alt="" width="46" height="46" loading="lazy">
+                                        <span>
+                                            <span class="name">Vikram D.</span><br>
+                                            <span class="role">DTH &amp; broadband customer</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tcarousel-slide" data-carousel-slide>
+                                <div class="quote-card">
+                                    <span class="stars" aria-label="Rated 5 out of 5">
+                                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                            data-lucide="star"></i><i data-lucide="star"></i>
+                                    </span>
+                                    <p>My mother pays her electricity bill on this herself now. She has never once
+                                        called me to ask how. Nothing else I set up for her can claim that.</p>
+                                    <div class="quote-author">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
+                                            alt="" width="46" height="46" loading="lazy">
+                                        <span>
+                                            <span class="name">Priya M.</span><br>
+                                            <span class="role">Utility bills, every month</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tcarousel-controls">
+                        <button type="button" class="tcarousel-arrow" data-carousel-prev
+                            aria-label="Previous testimonial"><i data-lucide="arrow-left"></i></button>
+                        <div class="tcarousel-dots" data-carousel-dots></div>
+                        <button type="button" class="tcarousel-arrow" data-carousel-next
+                            aria-label="Next testimonial"><i data-lucide="arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2 class="mb-2">Manage multiple bills?</h2>
+                    <p>Create an account to save your favourite numbers and consumer IDs &mdash; then settle everything from one screen each month.</p>
+                    <div class="hero-actions">
+                        <a href="register.html" class="btn btn-primary btn-lg">Create Account</a>
+                        <a href="login.html" class="btn btn-outline btn-lg">I already have one</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand-logo">
+                        <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
+                    </a>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online, and at our neighbourhood store.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Mobile Recharge</a></li>
+                        <li><a href="services.html">DTH Recharge</a></li>
+                        <li><a href="services.html">Utility Bills</a></li>
+                        <li><a href="services.html">FASTag</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> ZapPay. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span><i data-lucide="shield-check"></i> PCI-DSS aligned</span>
+                    <span><i data-lucide="lock"></i> 256-bit encryption</span>
+                    <span><i data-lucide="badge-check"></i> Verified merchant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

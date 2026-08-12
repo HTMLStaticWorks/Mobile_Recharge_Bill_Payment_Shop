@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Portrait of Vikram D.">
+  <defs>
+    <linearGradient id="av3Bg" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <clipPath id="av3Clip"><circle cx="48" cy="48" r="48"/></clipPath>
+  </defs>
+  <g clip-path="url(#av3Clip)">
+    <rect width="96" height="96" fill="url(#av3Bg)"/>
+    <circle cx="78" cy="78" r="26" fill="#FFFFFF" opacity="0.12"/>
+    <path d="M48 60c-17 0-30 12-30 28v8h60v-8c0-16-13-28-30-28z" fill="#0B3B33"/>
+    <path d="M48 60c-9 0-17 3-22 9l8 27h28l8-27c-5-6-13-9-22-9z" fill="#D1FAE5"/>
+    <rect x="42" y="46" width="12" height="18" rx="6" fill="#B57A55"/>
+    <circle cx="48" cy="36" r="17" fill="#D08F62"/>
+    <path d="M31 37c0-12 8-19 17-19s17 7 17 19c0-7-7-10-17-10s-17 3-17 10z" fill="#111827"/>
+    <path d="M40 44h6M50 44h6" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+    <path d="M42 50c3 3 9 3 12 0" stroke="#8B5A3C" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M40 69l8 8 8-8-8-5z" fill="#A7F3D0"/>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 720" fill="none" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract illustration of secure ZapPay transactions">
+  <defs>
+    <linearGradient id="aaBg" x1="0" y1="0" x2="480" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="0.5" stop-color="#6D28D9"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="aaMint" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="aaBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <clipPath id="aaClip"><rect width="480" height="720"/></clipPath>
+  </defs>
+  <g clip-path="url(#aaClip)">
+    <rect width="480" height="720" fill="url(#aaBg)"/>
+    <g filter="url(#aaBlur)" opacity="0.5">
+      <circle cx="80" cy="120" r="140" fill="#A5B4FC"/>
+      <circle cx="420" cy="560" r="150" fill="#34D399"/>
+      <circle cx="400" cy="120" r="110" fill="#C4B5FD"/>
+    </g>
+    <g opacity="0.12" stroke="#FFFFFF">
+      <path d="M0 120h480M0 240h480M0 360h480M0 480h480M0 600h480M120 0v720M240 0v720M360 0v720"/>
+    </g>
+
+    <!-- Card stack -->
+    <g transform="rotate(-8 240 300)">
+      <rect x="86" y="212" width="308" height="188" rx="26" fill="#FFFFFF" opacity="0.16"/>
+    </g>
+    <g transform="rotate(-3 240 300)">
+      <rect x="96" y="230" width="288" height="176" rx="24" fill="#FFFFFF" opacity="0.95"/>
+      <rect x="120" y="258" width="44" height="32" rx="8" fill="#FBBF24"/>
+      <path d="M132 266v16M126 274h12" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="120" y="316" width="184" height="12" rx="6" fill="#E2E8F0"/>
+      <rect x="120" y="344" width="96" height="10" rx="5" fill="#EDF1F6"/>
+      <circle cx="316" cy="350" r="20" fill="#C7D2FE"/>
+      <circle cx="338" cy="350" r="20" fill="#818CF8" opacity="0.85"/>
+    </g>
+
+    <!-- Secure badge -->
+    <g>
+      <circle cx="240" cy="500" r="46" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="240" cy="500" r="34" fill="url(#aaMint)"/>
+      <path d="M226 500l10 10 20-20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Chips -->
+    <rect x="48" y="588" width="150" height="56" rx="18" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="70" y="608" width="76" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+    <rect x="70" y="624" width="48" height="6" rx="3" fill="#FFFFFF" opacity="0.4"/>
+    <rect x="266" y="616" width="164" height="56" rx="18" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="288" y="636" width="90" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+    <rect x="288" y="652" width="56" height="6" rx="3" fill="#FFFFFF" opacity="0.4"/>
+
+    <!-- Bolt -->
+    <path d="M262 62l-52 78h34l-10 62 58-84h-38z" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+</svg>

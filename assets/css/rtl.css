@@ -1,0 +1,132 @@
+/* 
+  ZapPay - Mobile Recharge & Bill Payment Shop
+  RTL Support
+*/
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6,
+[dir="rtl"] .text-center {
+  text-align: center; /* Maintain global centering for headings */
+}
+
+[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-col h4 {
+  text-align: right;
+}
+
+/* Margin and Padding Flips */
+[dir="rtl"] .timeline {
+  border-left: none;
+  border-right: 2px solid var(--color-primary);
+  padding-left: 0;
+  padding-right: var(--space-4);
+  margin-left: 0;
+  margin-right: var(--space-2);
+}
+
+[dir="rtl"] .timeline-item {
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: calc(var(--space-4) * -1 - 9px);
+}
+
+[dir="rtl"] .auth-divider:not(:empty)::before { 
+  margin-right: 0; 
+  margin-left: .25em; 
+}
+[dir="rtl"] .auth-divider:not(:empty)::after { 
+  margin-left: 0; 
+  margin-right: .25em; 
+}
+
+/* Mobile Drawer */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -100%;
+  transition: left 0.3s ease;
+}
+
+[dir="rtl"] .mobile-drawer.open {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .drawer-close {
+  align-self: flex-start;
+}
+
+/* Premium components */
+[dir="rtl"] .split h2,
+[dir="rtl"] .split h3,
+[dir="rtl"] .post-body,
+[dir="rtl"] .post-body h3,
+[dir="rtl"] .info-tile,
+[dir="rtl"] .auth-art-content h2,
+[dir="rtl"] .glass-chip {
+  text-align: right;
+}
+
+[dir="rtl"] .post-tag,
+[dir="rtl"] .post-body {
+  align-self: auto;
+}
+
+[dir="rtl"] .quote-card::before {
+  right: auto;
+  left: 18px;
+}
+
+[dir="rtl"] .avatar-stack img {
+  margin-left: 0;
+  margin-right: -12px;
+}
+
+[dir="rtl"] .avatar-stack img:first-child {
+  margin-right: 0;
+}
+
+[dir="rtl"] .chip-tl {
+  left: auto;
+  right: -2%;
+}
+
+[dir="rtl"] .chip-br {
+  right: auto;
+  left: -2%;
+}
+
+[dir="rtl"] .link-arrow span {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .link-arrow:hover span {
+  transform: scaleX(-1) translateX(4px);
+}
+
+[dir="rtl"] .marquee-track {
+  animation-direction: reverse;
+}
+
+[dir="rtl"] .mobile-drawer {
+  border-left: none;
+  border-right: 1px solid var(--color-border);
+}
+
+[dir="rtl"] .quick-pay .form-control {
+  padding-left: 16px;
+  padding-right: 18px;
+}

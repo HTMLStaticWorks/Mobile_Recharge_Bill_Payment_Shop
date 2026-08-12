@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Portrait of Rahul S.">
+  <defs>
+    <linearGradient id="av1Bg" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <clipPath id="av1Clip"><circle cx="48" cy="48" r="48"/></clipPath>
+  </defs>
+  <g clip-path="url(#av1Clip)">
+    <rect width="96" height="96" fill="url(#av1Bg)"/>
+    <circle cx="76" cy="20" r="26" fill="#FFFFFF" opacity="0.12"/>
+    <path d="M48 60c-17 0-30 12-30 28v8h60v-8c0-16-13-28-30-28z" fill="#0F172A"/>
+    <path d="M48 60c-9 0-17 3-22 9l8 27h28l8-27c-5-6-13-9-22-9z" fill="#E0E7FF"/>
+    <rect x="42" y="46" width="12" height="18" rx="6" fill="#D8A07A"/>
+    <circle cx="48" cy="36" r="17" fill="#EFB98D"/>
+    <path d="M31 36c0-11 8-18 17-18s17 7 17 18c0-6-7-9-17-9s-17 3-17 9z" fill="#1F2937"/>
+    <path d="M40 69l8 8 8-8-8-5z" fill="#C7D2FE"/>
+  </g>
+</svg>

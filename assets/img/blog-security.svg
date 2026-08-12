@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of a secured online payment">
+  <defs>
+    <linearGradient id="bsBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4338CA"/>
+      <stop offset="0.55" stop-color="#5B21B6"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="bsShield" x1="240" y1="90" x2="400" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <filter id="bsBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <clipPath id="bsClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#bsClip)">
+    <rect width="640" height="400" fill="url(#bsBg)"/>
+    <g filter="url(#bsBlur)" opacity="0.55">
+      <circle cx="110" cy="80" r="110" fill="#818CF8"/>
+      <circle cx="560" cy="330" r="120" fill="#10B981"/>
+    </g>
+    <g opacity="0.16" stroke="#FFFFFF">
+      <path d="M0 100h640M0 200h640M0 300h640M160 0v400M320 0v400M480 0v400"/>
+    </g>
+    <g opacity="0.25">
+      <circle cx="320" cy="200" r="150" stroke="#FFFFFF"/>
+      <circle cx="320" cy="200" r="110" stroke="#FFFFFF"/>
+    </g>
+    <path d="M320 84l84 30v88c0 56-36 90-84 112-48-22-84-56-84-112v-88z" fill="url(#bsShield)" opacity="0.96"/>
+    <path d="M320 84l84 30v88c0 56-36 90-84 112z" fill="#C7D2FE" opacity="0.55"/>
+    <path d="M288 202l22 22 46-50" stroke="#4F46E5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <g opacity="0.9">
+      <rect x="60" y="164" width="96" height="72" rx="18" fill="#FFFFFF" opacity="0.14"/>
+      <rect x="78" y="186" width="60" height="8" rx="4" fill="#FFFFFF" opacity="0.6"/>
+      <rect x="78" y="204" width="38" height="6" rx="3" fill="#FFFFFF" opacity="0.4"/>
+      <rect x="484" y="130" width="96" height="72" rx="18" fill="#FFFFFF" opacity="0.14"/>
+      <rect x="502" y="152" width="60" height="8" rx="4" fill="#FFFFFF" opacity="0.6"/>
+      <rect x="502" y="170" width="38" height="6" rx="3" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+  </g>
+</svg>
