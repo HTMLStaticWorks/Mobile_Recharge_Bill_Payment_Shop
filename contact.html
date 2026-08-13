@@ -32,9 +32,9 @@
         <nav class="drawer-links">
             <a href="index.html">Home</a>
             <a href="home2.html">Home 2</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="operators.html">Operators</a>
-            <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html" class="active">Contact</a>
         </nav>
@@ -59,9 +59,9 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="home2.html">Home 2</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="operators.html">Operators</a>
-                <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html" class="active">Contact</a>
             </nav>
@@ -128,8 +128,8 @@
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start;">
                     
                     <!-- General Inquiry Form -->
-                    <div class="card" style="align-items: stretch; text-align: left;">
-                        <h3 class="mb-3" style="text-align: left;">General Inquiry</h3>
+                    <div class="card card-form">
+                        <h3 class="mb-3">General Inquiry</h3>
                         <p class="text-muted mb-4">Facing an issue with a transaction? Send us a message.</p>
                         
                         <form class="validate-form" action="https://formspree.io/f/placeholder_general" method="POST" novalidate>
@@ -211,11 +211,7 @@
                                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                                         </svg></a>
-                                    <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                            <path
-                                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                                        </svg></a>
+                                    <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                                     <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                                             aria-hidden="true">
@@ -226,15 +222,24 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Map Placeholder -->
-                        <div class="card" style="padding: 0; overflow: hidden; height: 250px;">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531590464!3d-37.81720974201389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                            </iframe>
-                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Us -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Find us</span>
+                    <h2>Visit the counter</h2>
+                    <p>123 Tech Park, Financial District &mdash; open Mon&ndash;Sat, 9:00 AM to 8:00 PM.</p>
+                </div>
+                <div class="media-frame map-frame reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531590464!3d-37.81720974201389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                        title="Map showing the ZapPay store location" loading="lazy" allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -247,7 +252,7 @@
                     <p>Dedicated plans and APIs for businesses. Fill out the form below and our sales team will contact you.</p>
                 </div>
                 
-                <div class="card" style="max-width: 800px; margin: 0 auto; align-items: stretch; text-align: left;">
+                <div class="card card-form" style="max-width: 800px; margin: 0 auto;">
                     <form class="validate-form" action="https://formspree.io/f/placeholder_corporate" method="POST" novalidate>
                         <div class="form-success-msg">Your corporate inquiry has been submitted. Our sales team will contact you shortly.</div>
                         <div class="form-inner">
@@ -329,7 +334,7 @@
                     <div class="social-links">
                         <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
                         <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                         <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
                     </div>
                 </div>
@@ -374,6 +379,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <a href="#top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </a>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>

@@ -32,9 +32,9 @@
         <nav class="drawer-links">
             <a href="index.html">Home</a>
             <a href="home2.html">Home 2</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="operators.html">Operators</a>
-            <a href="about.html">About</a>
             <a href="blog.html" class="active">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -59,9 +59,9 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="home2.html">Home 2</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="operators.html">Operators</a>
-                <a href="about.html">About</a>
                 <a href="blog.html" class="active">Blog</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -178,6 +178,54 @@
                 </div>
             </div>
         </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section reveal">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: var(--space-4);">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="lead" style="max-width: 600px; margin: 0 auto;">Got questions about digital payments, mobile recharges, or security? We've got answers.</p>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span>How safe are online bill payments with ZapPay?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1" hidden>
+                            <div class="faq-answer-content">
+                                <p>ZapPay is PCI-DSS aligned and uses bank-grade 256-bit SSL encryption to secure all payments. We do not store your complete card credentials, and our secure checkout ensures every transaction is fully authenticated and protected.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span>What should I do if a recharge fails but money is deducted?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2" hidden>
+                            <div class="faq-answer-content">
+                                <p>Recharges are usually instantaneous, but network latency can sometimes cause delays or temporary failures. If money is debited but the recharge fails, our automated refund system triggers a reversal to your payment source within 24 to 48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span>Can I schedule automatic payments for utility bills?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3" hidden>
+                            <div class="faq-answer-content">
+                                <p>Yes! With ZapPay, you can set up recurring payment reminders or enable auto-pay for electricity, broadband, DTH, and mobile postpaid bills. Simply link your preferred payment method and enable the auto-pay setting in your account profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -192,7 +240,7 @@
                     <div class="social-links">
                         <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
                         <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                         <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
                     </div>
                 </div>
@@ -237,6 +285,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <a href="#top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </a>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>

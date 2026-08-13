@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supported Operators - ZapPay</title>
-    <meta name="description" content="View all supported telecom operators, DTH providers, and utility boards available on ZapPay.">
+    <meta name="description"
+        content="View all supported telecom operators, DTH providers, and utility boards available on ZapPay.">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -14,11 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script>
-      // Applied before first paint so a stored dark theme never flashes light.
-      (function(){try{var t=localStorage.getItem("zappay_theme");var d=localStorage.getItem("zappay_dir");var e=document.documentElement;if(t==="dark"){e.setAttribute("data-theme","dark");}else{e.removeAttribute("data-theme");}if(d){e.setAttribute("dir",d);}e.classList.add("js");}catch(err){}})();
+        // Applied before first paint so a stored dark theme never flashes light.
+        (function () { try { var t = localStorage.getItem("zappay_theme"); var d = localStorage.getItem("zappay_dir"); var e = document.documentElement; if (t === "dark") { e.setAttribute("data-theme", "dark"); } else { e.removeAttribute("data-theme"); } if (d) { e.setAttribute("dir", d); } e.classList.add("js"); } catch (err) { } })();
     </script>
     <!-- GA_TAG -->
 </head>
+
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Drawer Overlay -->
@@ -32,9 +35,9 @@
         <nav class="drawer-links">
             <a href="index.html">Home</a>
             <a href="home2.html">Home 2</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="operators.html" class="active">Operators</a>
-            <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -55,13 +58,13 @@
             <a href="index.html" class="logo">
                 <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
             </a>
-            
+
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="home2.html">Home 2</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="operators.html" class="active">Operators</a>
-                <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -89,10 +92,33 @@
                     <a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Operators</span>
                 </nav>
                 <h1>Supported Providers</h1>
-                <p class="lead" style="max-width: 620px; margin: 0 auto;">We support recharges and bill payments for hundreds of providers.</p>
+                <p class="lead" style="max-width: 620px; margin: 0 auto;">We support recharges and bill payments for
+                    hundreds of providers.</p>
             </div>
         </section>
 
+        <!-- Coverage -->
+        <section class="coverage">
+            <div class="container">
+                <div class="split">
+                    <div class="media-frame reveal">
+                        <img src="assets/img/coverage-hub.png"
+                            alt="Illustration of India with connected coverage points across telecom and utility providers"
+                            loading="lazy" width="900" height="640">
+                    </div>
+                    <div class="split-copy-center">
+                        <span class="section-label">Coverage</span>
+                        <h2>Every circle, every board, one counter</h2>
+                        <p class="text-muted mb-3">A provider only goes on this page once it is live end to end &mdash;
+                            we hold the integration back until top-ups post to the operator in real time, not overnight.
+                            That is why the list grows slowly and why nothing on it surprises you at checkout.</p>
+                        <p class="text-muted">Missing a board? Send it to us. Most new electricity and water boards go
+                            live within a fortnight of the first request.</p>
+                        <a href="contact.html" class="btn btn-primary mt-3">Request a provider</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Provider Finder -->
         <section class="provider-finder" style="padding-bottom: 0;">
             <div class="container">
@@ -119,8 +145,9 @@
                     <div class="filter-chips" role="group" aria-label="Filter by category">
                         <button type="button" class="filter-chip" data-finder-chip="all" data-label="providers"
                             aria-pressed="true">All <span class="count"></span></button>
-                        <button type="button" class="filter-chip" data-finder-chip="telecom" data-label="telecom operators"
-                            aria-pressed="false">Telecom <span class="count"></span></button>
+                        <button type="button" class="filter-chip" data-finder-chip="telecom"
+                            data-label="telecom operators" aria-pressed="false">Telecom <span
+                                class="count"></span></button>
                         <button type="button" class="filter-chip" data-finder-chip="dth" data-label="DTH providers"
                             aria-pressed="false">DTH <span class="count"></span></button>
                         <button type="button" class="filter-chip" data-finder-chip="electricity"
@@ -185,7 +212,12 @@
                         <strong>BSNL</strong>
                         <p style="font-size: 0.8rem; margin: 0;">Prepaid/Postpaid</p>
                     </div>
-                    
+                    <div class="card card-compact reveal" data-provider="MTNL" data-category="telecom">
+                        <span class="brand-tile" style="--tile-a:#0E7490; --tile-b:#22D3EE;">MT</span>
+                        <strong>MTNL</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">Prepaid/Postpaid</p>
+                    </div>
+
                     <!-- DTH -->
                     <div class="card card-compact reveal" data-provider="Tata Play" data-category="dth">
                         <span class="brand-tile" style="--tile-a:#6D28D9; --tile-b:#A855F7;">TP</span>
@@ -205,6 +237,21 @@
                     <div class="card card-compact reveal" data-provider="Sun Direct" data-category="dth">
                         <span class="brand-tile" style="--tile-a:#B45309; --tile-b:#FBBF24;">SD</span>
                         <strong>Sun Direct</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="d2h" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#9D174D; --tile-b:#F472B6;">d2</span>
+                        <strong>d2h</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="DD Free Dish" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#0F766E; --tile-b:#2DD4BF;">DD</span>
+                        <strong>DD Free Dish</strong>
+                        <p style="font-size: 0.8rem; margin: 0;">DTH</p>
+                    </div>
+                    <div class="card card-compact reveal" data-provider="Tata Play Binge" data-category="dth">
+                        <span class="brand-tile" style="--tile-a:#4C1D95; --tile-b:#8B5CF6;">TB</span>
+                        <strong>Tata Play Binge</strong>
                         <p style="font-size: 0.8rem; margin: 0;">DTH</p>
                     </div>
                 </div>
@@ -235,7 +282,7 @@
                         <strong>MSEDCL</strong>
                         <p style="font-size: 0.8rem; margin: 0;">Electricity</p>
                     </div>
-                    
+
                     <div class="card card-compact reveal" data-provider="BWSSB" data-category="water">
                         <span class="brand-tile" style="--tile-a:#0E7490; --tile-b:#22D3EE;">BW</span>
                         <strong>BWSSB</strong>
@@ -246,7 +293,7 @@
                         <strong>DJB</strong>
                         <p style="font-size: 0.8rem; margin: 0;">Water</p>
                     </div>
-                    
+
                     <div class="card card-compact reveal" data-provider="IGL" data-category="gas">
                         <span class="brand-tile" style="--tile-a:#EA580C; --tile-b:#F59E0B;">IG</span>
                         <strong>IGL</strong>
@@ -287,34 +334,13 @@
             </div>
         </section>
 
-        <!-- Coverage -->
-        <section class="coverage">
-            <div class="container">
-                <div class="split">
-                    <div class="media-frame reveal">
-                        <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                            alt="Telecom tower against an open sky" loading="lazy" width="900" height="640">
-                    </div>
-                    <div class="split-copy-center">
-                        <span class="section-label">Coverage</span>
-                        <h2>Every circle, every board, one counter</h2>
-                        <p class="text-muted mb-3">A provider only goes on this page once it is live end to end &mdash;
-                            we hold the integration back until top-ups post to the operator in real time, not overnight.
-                            That is why the list grows slowly and why nothing on it surprises you at checkout.</p>
-                        <p class="text-muted">Missing a board? Send it to us. Most new electricity and water boards go
-                            live within a fortnight of the first request.</p>
-                        <a href="contact.html" class="btn btn-primary mt-3">Request a provider</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- CTA Missing Provider -->
         <section class="cta-missing bg-alt band-glow">
             <div class="container">
                 <div class="cta-band reveal">
                     <h3 class="mb-2">Don't see your provider?</h3>
-                    <p>We are constantly adding new providers. Let us know if yours is missing and we'll get it live.</p>
+                    <p>We are constantly adding new providers. Let us know if yours is missing and we'll get it live.
+                    </p>
                     <div class="hero-actions">
                         <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
                     </div>
@@ -331,12 +357,33 @@
                     <a href="index.html" class="footer-brand-logo">
                         <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
                     </a>
-                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online, and at our neighbourhood store.</p>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online,
+                        and at our neighbourhood store.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                <path d="m10 15 5-3-5-3z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -363,9 +410,12 @@
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <ul class="footer-links">
-                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
-                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
-                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin"
+                                    style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone"
+                                    style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail"
+                                    style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -381,6 +431,11 @@
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <a href="#top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </a>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="assets/js/main.js"></script>
@@ -388,4 +443,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

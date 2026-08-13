@@ -400,23 +400,34 @@ section {
   gap: var(--space-2);
 }
 
-.logo {
+/* Header and footer wordmark share one definition so the two can't drift
+   apart in size, weight or colour. Brand violet rather than the body text
+   colour, so the wordmark reads as part of the mark beside it. */
+.logo,
+.footer-brand-logo {
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: var(--weight-heading-1);
-  color: var(--color-text-main);
+  color: var(--color-violet);
   letter-spacing: -0.02em;
-  display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo:hover {
-  color: var(--color-text-main);
+.logo {
+  display: flex;
+}
+
+/* The wordmark is a plain link home — no hover treatment in either place.
+   These override the site-wide a:hover colour shift. */
+.logo:hover,
+.footer-brand-logo:hover {
+  color: var(--color-violet);
 }
 
 .logo img,
-.logo .logo-mark {
+.logo .logo-mark,
+.footer-brand-logo img {
   width: 34px;
   height: 34px;
   border-radius: 11px;
@@ -829,7 +840,21 @@ section {
 }
 
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
-.grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
 .grid-6 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
 
 .services-grid {
@@ -941,6 +966,10 @@ a.card:hover {
 
 [data-theme="dark"] .card-icon {
   background-color: rgba(99, 102, 241, 0.16);
+  /* #6366F1 strokes sit at ~3.5:1 on the tinted dark badge and read as
+     invisible at 2px. This lifts the glyph to ~10:1. */
+  color: #A5B4FC;
+  border-color: rgba(165, 180, 252, 0.28);
 }
 
 .card-title {
@@ -958,6 +987,25 @@ a.card:hover {
 .card .btn {
   margin-top: var(--space-3);
   width: 100%;
+}
+
+/* Cards whose body is a form. Two of the shared .card rules above misfire
+   here: `height: 100%` stretches the card to the tallest cell in its grid
+   row, and `.card p { flex-grow: 1 }` — meant to push a trailing button down
+   — then lets the intro paragraph swallow that surplus, opening a large gap
+   above the first field. Size to content instead and stop the copy growing. */
+.card-form {
+  height: auto;
+  align-items: stretch;
+  text-align: left;
+}
+
+.card-form > h3 {
+  text-align: left; /* overrides the global centred-heading rule */
+}
+
+.card-form > p {
+  flex-grow: 0;
 }
 
 /* Photo band that bleeds to the card edge, with the icon straddling its base */
@@ -1168,11 +1216,23 @@ a.card:hover {
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
   background: var(--color-surface);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.3s ease;
 }
 
 .media-frame img {
   width: 100%;
   display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.media-frame:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 40px 80px -20px rgba(23, 27, 62, 0.45), 0 12px 30px -10px rgba(23, 27, 62, 0.25);
+  border-color: var(--tint-primary-24);
+}
+
+.media-frame:hover img {
+  transform: scale(1.04);
 }
 
 .media-frame::after {
@@ -1183,11 +1243,30 @@ a.card:hover {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+/* Standalone map band. An iframe carries no intrinsic aspect ratio, so the
+   frame sets an explicit height rather than letting the embed collapse. */
+.map-frame {
+  height: clamp(320px, 42vh, 460px);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .split {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: clamp(28px, 4vw, 64px);
   align-items: center;
+}
+
+@media (min-width: 769px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .split h2,
@@ -1622,21 +1701,11 @@ a.card:hover {
   color: #fff;
 }
 
+/* Type, colour and mark sizing come from the shared .logo rule above; only
+   the footer-specific box model lives here. */
 .footer-brand-logo {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
   margin-bottom: var(--space-2);
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  color: #fff;
-  letter-spacing: -0.02em;
-}
-
-.footer-brand-logo img {
-  width: 34px;
-  height: 34px;
-  border-radius: 11px;
 }
 
 .social-links {
@@ -1837,11 +1906,28 @@ a.card:hover {
 
 .drawer-actions {
   margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  gap: 12px 10px;
   padding-top: var(--space-3);
   border-top: 1px solid var(--color-border);
+}
+
+.drawer-actions .theme-toggle {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.drawer-actions .rtl-toggle {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.drawer-actions .btn-primary {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  text-align: center;
+  width: 100%;
 }
 
 .drawer-overlay {
@@ -1927,9 +2013,8 @@ a.card:hover {
   justify-content: center;
   margin-bottom: var(--space-4);
   font-size: 1.35rem;
-  color: var(--color-primary);
+  /* Colour comes from .logo, so the wordmark matches the header and footer */
 }
-.auth-logo:hover { color: var(--color-primary); }
 .auth-logo img { width: 30px; height: 30px; }
 
 /* Wide-tracked uppercase display title, echoing the brand's editorial tone */
@@ -2327,6 +2412,10 @@ html.js .reveal.is-visible {
   .nav-actions .btn {
     display: none; /* Hide login btn in header on mobile, move to drawer */
   }
+  .nav-actions .theme-toggle,
+  .nav-actions .rtl-toggle {
+    display: none; /* Hide toggles from header, as they are in the mobile drawer */
+  }
   .hamburger {
     display: flex;
   }
@@ -2341,6 +2430,9 @@ html.js .reveal.is-visible {
   .hero-visual { max-width: 420px; }
   .card { padding: var(--space-3) var(--space-2); }
   .split h2, .split h3 { text-align: center; }
+  /* Four footer columns fold to a 2 x 2 block. Pinned rather than left to
+     auto-fit, which would otherwise drop to three tracks and orphan one. */
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-bottom { justify-content: center; }
 }
 
@@ -3561,6 +3653,15 @@ html.js .reveal.is-visible {
   }
 }
 
+/* Opt-in modifier: hold 3 x 2 on wide desktop too, instead of opening out to
+   six across. Only the wide band differs — below 1200 the ladder above
+   already gives 3, then 2, then 1. */
+@media (min-width: 1200px) {
+  .grid-6-3up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Small tablet — 2 across */
 @media (max-width: 767px) {
   .grid-6 {
@@ -3568,9 +3669,11 @@ html.js .reveal.is-visible {
   }
 }
 
-/* Phone — one card per row */
+/* Phone — one card per row. The footer joins it here: a 2 x 2 block gets too
+   cramped for the address line and link lists below this width. */
 @media (max-width: 479px) {
-  .grid-6 {
+  .grid-6,
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -3600,3 +3703,162 @@ html.js .reveal.is-visible {
   transform: scale(1.18);
   color: var(--color-primary-hover) !important;
 }
+
+/* ==========================================================================
+   FAQ Section & Accordion
+   ========================================================================== */
+.faq-section {
+  padding: var(--section-y) 0;
+  position: relative;
+  background-color: var(--color-surface-2);
+  border-top: 1px solid var(--color-border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.faq-accordion {
+  max-width: 720px;
+  margin: var(--space-4) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.faq-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.faq-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: var(--weight-bold-inline);
+  color: var(--color-secondary);
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+[dir="rtl"] .faq-question {
+  text-align: right;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.faq-question:hover {
+  color: var(--color-primary);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-muted);
+  transition: transform 0.3s var(--ease-out), color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  opacity: 0;
+}
+
+.faq-answer:not([hidden]) {
+  opacity: 1;
+}
+
+.faq-answer-content {
+  padding: 0 var(--space-3) var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.975rem;
+  line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   Back to top — fixed pill, revealed once the page has scrolled a screenful
+   ========================================================================== */
+
+.back-to-top {
+  position: fixed;
+  /* Logical inset so the button lands bottom-left under dir="rtl". */
+  inset-inline-end: clamp(16px, 3vw, 28px);
+  bottom: clamp(16px, 3vw, 28px);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--tint-primary-24);
+  background-image: var(--gradient-brand);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  /* Hidden state — kept out of the tab order until it is actually on screen. */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out),
+    visibility 0.3s, box-shadow 0.3s var(--ease-out);
+}
+
+.back-to-top svg,
+.back-to-top i {
+  width: 20px;
+  height: 20px;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow), var(--shadow-md);
+  color: #fff;
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* No JS means no scroll listener to add .is-visible, so pin it on. */
+html:not(.js) .back-to-top {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top:hover { transform: none; }
+}
+

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRTL();
   initMobileNav();
   initNavbarScroll();
+  initBackToTop();
   initTypingAnimation();
   initReveal();
   initMarquee();
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initPasswordToggles();
   initYear();
+  initFaq();
 });
 
 // --- Theme Toggle ---
@@ -121,6 +123,28 @@ function initNavbarScroll() {
   const update = () => navbar.classList.toggle('scrolled', window.scrollY > 12);
   update();
   window.addEventListener('scroll', update, { passive: true });
+}
+
+// --- Back to Top ---
+function initBackToTop() {
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+
+  // Roughly one screenful, so short pages never show it.
+  const update = () => btn.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.6);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+
+    // Hand focus back to the top of the page so keyboard users continue from
+    // the header rather than from a button that is about to fade out.
+    const target = document.querySelector('.skip-link') || document.body;
+    target.focus({ preventScroll: true });
+  });
 }
 
 // --- Typing / Counter Animation (Hero) ---
@@ -797,3 +821,41 @@ function initFormValidation() {
     });
   });
 }
+
+// --- FAQ Accordion ---
+function initFaq() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    
+    if (!questionBtn || !answer) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isExpanded = questionBtn.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other FAQs (optional but nice)
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherBtn = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          if (otherBtn && otherAnswer) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherAnswer.hidden = true;
+            otherAnswer.style.maxHeight = null;
+          }
+        }
+      });
+
+      // Toggle current FAQ
+      questionBtn.setAttribute('aria-expanded', String(!isExpanded));
+      answer.hidden = isExpanded;
+      if (isExpanded) {
+        answer.style.maxHeight = null;
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+}
+
