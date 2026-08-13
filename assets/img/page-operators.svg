@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of telecom and utility providers connected to a single payment hub">
+  <defs>
+    <linearGradient id="poBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3730A3"/>
+      <stop offset="0.55" stop-color="#4C1D95"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="poHub" x1="272" y1="152" x2="368" y2="248" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <filter id="poBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <clipPath id="poClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#poClip)">
+    <rect width="640" height="400" fill="url(#poBg)"/>
+    <g filter="url(#poBlur)" opacity="0.5">
+      <circle cx="118" cy="322" r="118" fill="#818CF8"/>
+      <circle cx="548" cy="88" r="112" fill="#22D3EE"/>
+      <circle cx="332" cy="360" r="96" fill="#A78BFA"/>
+    </g>
+    <g opacity="0.13" stroke="#FFFFFF">
+      <path d="M0 100h640M0 200h640M0 300h640M160 0v400M320 0v400M480 0v400"/>
+    </g>
+
+    <!-- Connections -->
+    <g stroke="#FFFFFF" stroke-opacity="0.4" stroke-dasharray="5 7">
+      <path d="M320 200 128 96M320 200 96 214M320 200 140 316M320 200 512 100M320 200 552 212M320 200 500 314"/>
+    </g>
+
+    <!-- Signal rings -->
+    <g opacity="0.28">
+      <circle cx="320" cy="200" r="94" stroke="#FFFFFF"/>
+      <circle cx="320" cy="200" r="134" stroke="#FFFFFF"/>
+    </g>
+
+    <!-- Central hub -->
+    <rect x="272" y="152" width="96" height="96" rx="30" fill="url(#poHub)"/>
+    <path d="M324 172l-18 26h13l-5 22 20-28h-14z" fill="#4F46E5"/>
+
+    <!-- Provider nodes -->
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+      <g>
+        <circle cx="128" cy="96" r="30" fill="#1D4ED8"/>
+        <text x="128" y="102" fill="#FFFFFF">Ji</text>
+      </g>
+      <g>
+        <circle cx="96" cy="214" r="30" fill="#DC2626"/>
+        <text x="96" y="220" fill="#FFFFFF">Ai</text>
+      </g>
+      <g>
+        <circle cx="140" cy="316" r="30" fill="#BE123C"/>
+        <text x="140" y="322" fill="#FFFFFF">Vi</text>
+      </g>
+      <g>
+        <circle cx="512" cy="100" r="30" fill="#6D28D9"/>
+        <text x="512" y="106" fill="#FFFFFF">TP</text>
+      </g>
+      <g>
+        <circle cx="552" cy="212" r="30" fill="#0E7490"/>
+        <text x="552" y="218" fill="#FFFFFF">WB</text>
+      </g>
+      <g>
+        <circle cx="500" cy="314" r="30" fill="#047857"/>
+        <text x="500" y="320" fill="#FFFFFF">FT</text>
+      </g>
+    </g>
+
+    <!-- Live counter chip -->
+    <g>
+      <rect x="242" y="300" width="156" height="44" rx="16" fill="#FFFFFF" opacity="0.95"/>
+      <circle cx="266" cy="322" r="6" fill="#10B981"/>
+      <rect x="282" y="312" width="88" height="7" rx="3.5" fill="#312E81" opacity="0.6"/>
+      <rect x="282" y="326" width="54" height="6" rx="3" fill="#312E81" opacity="0.35"/>
+    </g>
+  </g>
+</svg>

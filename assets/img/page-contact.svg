@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of the ZapPay support team answering messages and calls">
+  <defs>
+    <linearGradient id="pcBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4338CA"/>
+      <stop offset="0.55" stop-color="#6D28D9"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="pcMail" x1="216" y1="150" x2="424" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <linearGradient id="pcMint" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="pcBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <clipPath id="pcClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#pcClip)">
+    <rect width="640" height="400" fill="url(#pcBg)"/>
+    <g filter="url(#pcBlur)" opacity="0.5">
+      <circle cx="92" cy="104" r="110" fill="#A5B4FC"/>
+      <circle cx="556" cy="316" r="116" fill="#22D3EE"/>
+      <circle cx="330" cy="52" r="84" fill="#F472B6"/>
+    </g>
+    <g opacity="0.13" stroke="#FFFFFF">
+      <path d="M0 100h640M0 200h640M0 300h640M160 0v400M320 0v400M480 0v400"/>
+    </g>
+
+    <!-- Envelope -->
+    <g>
+      <rect x="216" y="150" width="208" height="150" rx="20" fill="url(#pcMail)"/>
+      <path d="M216 172l104 74 104-74" stroke="#4F46E5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+      <path d="M216 288l78-64M424 288l-78-64" stroke="#4F46E5" stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+    </g>
+
+    <!-- Reply bubble -->
+    <g>
+      <path d="M330 66h150a18 18 0 0 1 18 18v54a18 18 0 0 1-18 18H372l-24 22v-22h-18a18 18 0 0 1-18-18V84a18 18 0 0 1 18-18z" fill="#FFFFFF" opacity="0.95"/>
+      <rect x="350" y="94" width="110" height="8" rx="4" fill="#312E81" opacity="0.5"/>
+      <rect x="350" y="112" width="80" height="8" rx="4" fill="#312E81" opacity="0.3"/>
+    </g>
+
+    <!-- Question bubble -->
+    <g>
+      <path d="M158 196h116a18 18 0 0 1 18 18v46a18 18 0 0 1-18 18h-14v20l-22-20h-80a18 18 0 0 1-18-18v-46a18 18 0 0 1 18-18z" fill="#FFFFFF" opacity="0.18"/>
+      <rect x="178" y="220" width="76" height="8" rx="4" fill="#FFFFFF" opacity="0.6"/>
+      <rect x="178" y="238" width="52" height="8" rx="4" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+
+    <!-- Support agent with headset -->
+    <g>
+      <circle cx="510" cy="176" r="34" fill="#FBBF24"/>
+      <path d="M510 148a24 24 0 0 1 24 20c-16 5-32 5-48 0a24 24 0 0 1 24-20z" fill="#4C1D95" opacity="0.75"/>
+      <path d="M482 178v-6a28 28 0 0 1 56 0v6" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+      <rect x="474" y="174" width="14" height="22" rx="7" fill="#FFFFFF"/>
+      <rect x="532" y="174" width="14" height="22" rx="7" fill="#FFFFFF"/>
+      <path d="M466 258c0-26 20-42 44-42s44 16 44 42z" fill="#4F46E5"/>
+    </g>
+
+    <!-- Call chip -->
+    <g>
+      <rect x="56" y="290" width="152" height="48" rx="16" fill="#FFFFFF" opacity="0.95"/>
+      <circle cx="82" cy="314" r="14" fill="url(#pcMint)"/>
+      <path d="M77 310c0 8 5 13 12 13l2-4-5-3-2 2c-2-1-4-3-5-5l2-2-3-5z" fill="#FFFFFF"/>
+      <rect x="106" y="304" width="78" height="7" rx="3.5" fill="#312E81" opacity="0.6"/>
+      <rect x="106" y="317" width="50" height="6" rx="3" fill="#312E81" opacity="0.35"/>
+    </g>
+
+    <!-- Reply time badge -->
+    <g>
+      <rect x="432" y="306" width="150" height="46" rx="16" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="456" cy="329" r="8" fill="#34D399"/>
+      <rect x="474" y="318" width="88" height="7" rx="3.5" fill="#FFFFFF" opacity="0.65"/>
+      <rect x="474" y="332" width="56" height="6" rx="3" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+  </g>
+</svg>

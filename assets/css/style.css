@@ -563,13 +563,13 @@ section {
   gap: 6px;
   color: var(--color-primary);
   font-size: 0.925rem;
+  text-decoration: none;
+  transition: color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
 }
-.link-arrow span {
-  transition: transform 0.25s var(--ease-out);
-  display: inline-block;
-}
-.link-arrow:hover span {
-  transform: translateX(4px);
+.link-arrow:hover {
+  color: var(--color-primary-hover);
+  transform: translateX(6px);
+  text-decoration: underline;
 }
 
 .icon-btn {
@@ -650,6 +650,49 @@ section {
 .hero-lead {
   max-width: 660px;
   margin: 0 auto var(--space-4);
+}
+
+/* --- Split hero: copy beside the product shot, centred within its column --- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 4vw, 56px);
+  align-items: center;
+  text-align: center;
+}
+
+/* The grid gap already spaces the two blocks apart. */
+.hero-split .hero-visual {
+  margin-top: 0;
+}
+
+/* Chip rows are flex, so text-align on the grid cannot centre them. */
+.hero-split .quick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    /* Copy gets the wider track so the headline holds two lines. */
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .hero-split .hero-visual {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+/* The mask on .hero::after is aimed at a centred column; nudge it toward the
+   product shot so the grid fades around the visual instead of the copy. */
+@media (min-width: 960px) {
+  .hero-split::after {
+    -webkit-mask-image: radial-gradient(65% 65% at 70% 40%, #000 10%, transparent 75%);
+    mask-image: radial-gradient(65% 65% at 70% 40%, #000 10%, transparent 75%);
+  }
 }
 
 .hero-actions {
@@ -1269,6 +1312,16 @@ a.card:hover {
   }
 }
 
+/* Opt-in modifier: once the split stacks, lead with the copy and push the
+   illustration below it, so a phone reads the story before the picture.
+   Source order is left alone, so the two-column layout above 768px keeps the
+   image on its original side. */
+@media (max-width: 768px) {
+  .split-copy-first > .media-frame {
+    order: 1;
+  }
+}
+
 .split h2,
 .split h3 {
   text-align: left;
@@ -1818,18 +1871,44 @@ a.card:hover {
 
 .page-header .container { position: relative; z-index: 1; }
 
-.breadcrumb {
-  display: flex;
+/* --- Split page header: copy beside the artwork, centred within its column --- */
+.ph-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 56px);
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin-bottom: var(--space-2);
+  text-align: center;
 }
 
-.breadcrumb a { color: var(--color-text-muted); }
-.breadcrumb a:hover { color: var(--color-primary); }
+/* Replaces the inline "max-width: 620px; margin: 0 auto" the headers carried,
+   so the width cap lives with the rest of the layout rules. */
+.ph-lead {
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.ph-art {
+  margin: 0;
+}
+
+/* Flex rows ignore text-align, so they are centred explicitly. */
+.page-header-split .trust-row,
+.page-header-split .hero-actions {
+  justify-content: center;
+}
+
+@media (min-width: 960px) {
+  .ph-grid {
+    /* Copy gets the wider track so headlines keep their natural break. */
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  /* The grid mask is aimed at a centred column; bias it toward the artwork. */
+  .page-header-split::after {
+    -webkit-mask-image: radial-gradient(65% 75% at 68% 30%, #000, transparent 75%);
+    mask-image: radial-gradient(65% 75% at 68% 30%, #000, transparent 75%);
+  }
+}
 
 /* Utilities */
 .mb-1 { margin-bottom: var(--space-1); }
@@ -2017,11 +2096,10 @@ a.card:hover {
 }
 .auth-logo img { width: 30px; height: 30px; }
 
-/* Wide-tracked uppercase display title, echoing the brand's editorial tone */
 .auth-title {
   font-family: var(--font-heading);
   font-weight: var(--weight-heading-1);
-  font-size: clamp(1.55rem, 5vw, 2.05rem);
+  font-size: clamp(1.15rem, 4vw, 1.45rem);
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.055em;
@@ -2030,7 +2108,7 @@ a.card:hover {
 
 .auth-sub {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.8125rem;
   max-width: 34ch;
   margin: 0 auto var(--space-4);
 }
@@ -2356,7 +2434,9 @@ a.card:hover {
 /* Contact info tiles */
 .info-tile {
   display: flex;
-  align-items: flex-start;
+  /* Two short lines of copy sit level with the badge when both are centred;
+     top-aligning left the icon floating above a ragged block. */
+  align-items: center;
   gap: var(--space-2);
   padding: var(--space-3);
   background: var(--color-surface);
@@ -2389,6 +2469,26 @@ a.info-tile:hover {
 
 .info-tile .card-icon svg,
 .info-tile .card-icon i { width: 20px; height: 20px; }
+
+/* Spans rather than <p>, so the copy stack stays valid inside the <a>. */
+.info-tile-copy {
+  display: block;
+  min-width: 0;
+}
+
+.info-tile-copy strong {
+  display: block;
+  line-height: 1.35;
+}
+
+.info-tile-meta {
+  display: block;
+  margin-top: 3px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
 
 /* Scroll reveal */
 html.js .reveal {
@@ -3626,12 +3726,16 @@ html.js .reveal.is-visible {
     grid-template-columns: 1fr;
   }
 
-  /* Undo the centring above, or the lone card would sit at half width. */
+  /* Undo the centring above, or the lone card would sit at half width.
+     justify-self must go back to stretch as well: left at "center", the item
+     falls back to fit-content sizing and the last card ends up narrower than
+     its siblings and nudged inward, even with width back at auto. */
   .grid-3 > :last-child:nth-child(odd),
   .step-grid > :last-child:nth-child(odd),
   .plan-grid > :last-child:nth-child(odd) {
     grid-column: auto;
     width: auto;
+    justify-self: stretch;
   }
 }
 
@@ -3747,7 +3851,7 @@ html.js .reveal.is-visible {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: var(--weight-bold-inline);
-  color: var(--color-secondary);
+  color: var(--color-text-main);
   text-align: left;
   cursor: pointer;
   outline: none;

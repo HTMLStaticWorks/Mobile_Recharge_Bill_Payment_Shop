@@ -82,21 +82,29 @@
     </header>
 
     <main id="main">
-        <section class="hero" style="min-height: 66vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <section class="hero hero-split" style="min-height: 66vh; display: flex; align-items: center;">
             <div class="container">
-                <span class="eyebrow"><i data-lucide="compass"></i> Error 404</span>
-                <div class="gradient-text" style="font-size: clamp(5rem, 16vw, 9rem); font-family: var(--font-heading); font-weight: var(--weight-heading-1); line-height: 1; letter-spacing: var(--track-display); margin-bottom: var(--space-2);">404</div>
-                <h1 class="mb-3">Page Not Found</h1>
-                <p class="lead mb-4" style="max-width: 540px; margin: 0 auto var(--space-4);">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-                <div class="hero-actions">
-                    <a href="index.html" class="btn btn-primary btn-lg">Return to Home</a>
-                    <a href="services.html" class="btn btn-outline btn-lg">Browse Services</a>
-                </div>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <span class="eyebrow"><i data-lucide="compass"></i> Error 404</span>
+                        <div class="gradient-text" style="font-size: clamp(5rem, 16vw, 9rem); font-family: var(--font-heading); font-weight: var(--weight-heading-1); line-height: 1; letter-spacing: var(--track-display); margin-bottom: var(--space-2);">404</div>
+                        <h1 class="mb-3">Page Not Found</h1>
+                        <p class="lead hero-lead" style="max-width: 540px;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                        <div class="hero-actions">
+                            <a href="index.html" class="btn btn-primary btn-lg">Return to Home</a>
+                            <a href="services.html" class="btn btn-outline btn-lg">Browse Services</a>
+                        </div>
 
-                <div class="quick-chips" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: var(--space-4);">
-                    <a href="services.html" class="marquee-item"><i data-lucide="smartphone" style="width: 16px; height: 16px;"></i> Mobile Recharge</a>
-                    <a href="operators.html" class="marquee-item"><i data-lucide="signal" style="width: 16px; height: 16px;"></i> Operators</a>
-                    <a href="contact.html" class="marquee-item"><i data-lucide="life-buoy" style="width: 16px; height: 16px;"></i> Get Help</a>
+                        <div class="quick-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--space-4);">
+                            <a href="services.html" class="marquee-item"><i data-lucide="smartphone" style="width: 16px; height: 16px;"></i> Mobile Recharge</a>
+                            <a href="operators.html" class="marquee-item"><i data-lucide="signal" style="width: 16px; height: 16px;"></i> Operators</a>
+                            <a href="contact.html" class="marquee-item"><i data-lucide="life-buoy" style="width: 16px; height: 16px;"></i> Get Help</a>
+                        </div>
+                    </div>
+
+                    <div class="media-frame hero-art reveal">
+                        <img src="assets/img/page-404.svg" alt="Illustration of a disconnected plug and a lost signal" width="640" height="400">
+                    </div>
                 </div>
             </div>
         </section>

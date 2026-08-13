@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of stacked articles and payment guides">
+  <defs>
+    <linearGradient id="pbBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4338CA"/>
+      <stop offset="0.55" stop-color="#5B21B6"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="pbSheet" x1="196" y1="96" x2="452" y2="336" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <filter id="pbBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <clipPath id="pbClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#pbClip)">
+    <rect width="640" height="400" fill="url(#pbBg)"/>
+    <g filter="url(#pbBlur)" opacity="0.5">
+      <circle cx="98" cy="300" r="112" fill="#818CF8"/>
+      <circle cx="556" cy="86" r="112" fill="#F472B6"/>
+      <circle cx="520" cy="330" r="90" fill="#34D399"/>
+    </g>
+    <g opacity="0.13" stroke="#FFFFFF">
+      <path d="M0 100h640M0 200h640M0 300h640M160 0v400M320 0v400M480 0v400"/>
+    </g>
+
+    <!-- Back sheets -->
+    <rect x="220" y="72" width="212" height="272" rx="22" fill="#FFFFFF" opacity="0.16" transform="rotate(-7 326 208)"/>
+    <rect x="216" y="84" width="216" height="268" rx="22" fill="#FFFFFF" opacity="0.24" transform="rotate(4 324 218)"/>
+
+    <!-- Front article sheet -->
+    <rect x="212" y="80" width="216" height="270" rx="22" fill="url(#pbSheet)"/>
+    <rect x="212" y="80" width="216" height="84" rx="22" fill="#4F46E5" opacity="0.16"/>
+    <rect x="236" y="104" width="66" height="16" rx="8" fill="#4F46E5" opacity="0.55"/>
+    <rect x="236" y="132" width="150" height="11" rx="5.5" fill="#312E81" opacity="0.55"/>
+    <rect x="236" y="182" width="168" height="9" rx="4.5" fill="#312E81" opacity="0.28"/>
+    <rect x="236" y="202" width="150" height="9" rx="4.5" fill="#312E81" opacity="0.22"/>
+    <rect x="236" y="222" width="168" height="9" rx="4.5" fill="#312E81" opacity="0.22"/>
+    <rect x="236" y="242" width="112" height="9" rx="4.5" fill="#312E81" opacity="0.18"/>
+    <rect x="236" y="288" width="96" height="28" rx="14" fill="#4F46E5"/>
+    <path d="M258 302h20m-6-6 6 6-6 6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Floating tag chips -->
+    <g>
+      <rect x="56" y="122" width="126" height="44" rx="16" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="80" cy="144" r="9" fill="#34D399"/>
+      <rect x="98" y="140" width="66" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+    </g>
+    <g>
+      <rect x="44" y="196" width="146" height="44" rx="16" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="68" cy="218" r="9" fill="#FBBF24"/>
+      <rect x="86" y="214" width="84" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+    </g>
+    <g>
+      <rect x="452" y="150" width="140" height="44" rx="16" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="476" cy="172" r="9" fill="#38BDF8"/>
+      <rect x="494" y="168" width="78" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+    </g>
+
+    <!-- Reading time badge -->
+    <g>
+      <rect x="452" y="238" width="134" height="46" rx="16" fill="#FFFFFF" opacity="0.95"/>
+      <circle cx="478" cy="261" r="13" stroke="#4F46E5" stroke-width="2.4"/>
+      <path d="M478 254v7l5 3" stroke="#4F46E5" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="500" y="252" width="62" height="7" rx="3.5" fill="#312E81" opacity="0.6"/>
+      <rect x="500" y="265" width="40" height="6" rx="3" fill="#312E81" opacity="0.35"/>
+    </g>
+  </g>
+</svg>

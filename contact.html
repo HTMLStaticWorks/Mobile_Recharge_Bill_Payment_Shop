@@ -83,13 +83,20 @@
 
     <main id="main">
         <!-- Page Header -->
-        <section class="page-header">
-            <div class="container text-center">
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Contact</span>
-                </nav>
-                <h1>Contact Us</h1>
-                <p class="lead" style="max-width: 620px; margin: 0 auto;">We're here to help. Get in touch for general support or bulk corporate requirements.</p>
+        <section class="page-header page-header-split">
+            <div class="container">
+                <div class="ph-grid">
+                    <div class="ph-copy">
+                        <h1>Contact Us</h1>
+                        <p class="lead ph-lead">We're here to help. Get in touch for general support or bulk corporate
+                            requirements.</p>
+                    </div>
+                    <div class="media-frame ph-art reveal">
+                        <img src="assets/img/page-contact.svg"
+                            alt="Illustration of the ZapPay support team answering messages and calls" width="640"
+                            height="400">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -99,23 +106,23 @@
                 <div class="grid grid-3">
                     <a href="tel:+12345678900" class="info-tile reveal">
                         <span class="card-icon"><i data-lucide="phone"></i></span>
-                        <span>
+                        <span class="info-tile-copy">
                             <strong>Call the store</strong>
-                            <p class="text-muted" style="margin: 2px 0 0; font-size: 0.9rem;">+1 234 567 8900 &middot; Mon&ndash;Sat, 9am&ndash;8pm</p>
+                            <span class="info-tile-meta">+1 234 567 8900<br>Mon&ndash;Sat, 9am&ndash;8pm</span>
                         </span>
                     </a>
                     <a href="mailto:support@zappay.com" class="info-tile reveal">
                         <span class="card-icon"><i data-lucide="mail"></i></span>
-                        <span>
+                        <span class="info-tile-copy">
                             <strong>Email support</strong>
-                            <p class="text-muted" style="margin: 2px 0 0; font-size: 0.9rem;">support@zappay.com &middot; Replies within 4 hours</p>
+                            <span class="info-tile-meta">support@zappay.com<br>Replies within 4 hours</span>
                         </span>
                     </a>
                     <a href="#corporate" class="info-tile reveal">
                         <span class="card-icon"><i data-lucide="briefcase"></i></span>
-                        <span>
+                        <span class="info-tile-copy">
                             <strong>Corporate sales</strong>
-                            <p class="text-muted" style="margin: 2px 0 0; font-size: 0.9rem;">Bulk recharge rates &amp; API access</p>
+                            <span class="info-tile-meta">Bulk recharge rates<br>&amp; API access</span>
                         </span>
                     </a>
                 </div>
@@ -125,7 +132,7 @@
         <!-- Contact Section -->
         <section class="contact-section">
             <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start;">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
                     
                     <!-- General Inquiry Form -->
                     <div class="card card-form">
@@ -160,66 +167,64 @@
                     </div>
 
                     <!-- Store Info & Map -->
-                    <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-                        <div class="card" style="align-items: center; text-align: center;">
-                            <h3 class="mb-3" style="text-align: center;">Our Store</h3>
-                            <ul class="contact-info-list" style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
-                                <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
-                                    <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
-                                        <i data-lucide="map-pin" style="color: var(--color-primary); flex-shrink: 0;"></i>
-                                        <strong style="margin: 0;">Address</strong>
-                                    </div>
-                                    <span class="text-muted">123 Tech Park, Financial District, City, Country 456001</span>
-                                </li>
-                                <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
-                                    <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
-                                        <i data-lucide="phone" style="color: var(--color-primary); flex-shrink: 0;"></i>
-                                        <strong style="margin: 0;">Phone</strong>
-                                    </div>
-                                    <span class="text-muted">+1 234 567 8900</span>
-                                </li>
-                                <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
-                                    <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
-                                        <i data-lucide="mail" style="color: var(--color-primary); flex-shrink: 0;"></i>
-                                        <strong style="margin: 0;">Email</strong>
-                                    </div>
-                                    <span class="text-muted">support@zappay.com</span>
-                                </li>
-                            </ul>
-                            
-                            <!-- Store Timings -->
-                            <div class="timings-banner" style="margin-top: var(--space-4); width: 100%; text-align: center; justify-content: center;">
-                                <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
-                                <div>
-                                    <p style="font-size: 0.95rem;"><strong>Store Hours:</strong> Mon-Sat | 9:00 AM - 8:00 PM</p>
+                    <div class="card" style="align-items: center; text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                        <h3 class="mb-3" style="text-align: center;">Our Store</h3>
+                        <ul class="contact-info-list" style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+                            <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+                                <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                    <i data-lucide="map-pin" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                    <strong style="margin: 0;">Address</strong>
                                 </div>
+                                <span class="text-muted">123 Tech Park, Financial District, City, Country 456001</span>
+                            </li>
+                            <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+                                <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                    <i data-lucide="phone" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                    <strong style="margin: 0;">Phone</strong>
+                                </div>
+                                <span class="text-muted">+1 234 567 8900</span>
+                            </li>
+                            <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+                                <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                    <i data-lucide="mail" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                    <strong style="margin: 0;">Email</strong>
+                                </div>
+                                <span class="text-muted">support@zappay.com</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Store Timings -->
+                        <div class="timings-banner" style="margin-top: var(--space-4); width: 100%; text-align: center; justify-content: center;">
+                            <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+                            <div>
+                                <p style="font-size: 0.95rem;"><strong>Store Hours:</strong> Mon-Sat | 9:00 AM - 8:00 PM</p>
                             </div>
+                        </div>
 
-                            <!-- Follow Us -->
-                            <div style="margin-top: var(--space-4); width: 100%;">
-                                <strong style="display: block; margin-bottom: 8px; text-align: center;">Follow Us</strong>
-                                <div class="social-links" style="margin-top: 0; justify-content: center;">
-                                    <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                                            aria-hidden="true">
-                                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                                        </svg></a>
-                                    <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                                            aria-hidden="true">
-                                            <rect x="2" y="2" width="20" height="20" rx="5" />
-                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                                        </svg></a>
-                                    <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                                    <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                                            aria-hidden="true">
-                                            <path
-                                                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-                                            <path d="m10 15 5-3-5-3z" />
-                                        </svg></a>
-                                </div>
+                        <!-- Follow Us -->
+                        <div style="margin-top: var(--space-4); width: 100%;">
+                            <strong style="display: block; margin-bottom: 8px; text-align: center;">Follow Us</strong>
+                            <div class="social-links" style="margin-top: 0; justify-content: center;">
+                                <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                    </svg></a>
+                                <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" />
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                    </svg></a>
+                                <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                                <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                        <path d="m10 15 5-3-5-3z" />
+                                    </svg></a>
                             </div>
                         </div>
                     </div>

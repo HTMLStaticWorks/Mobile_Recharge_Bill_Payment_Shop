@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of a wallet paying every monthly bill from one place">
+  <defs>
+    <linearGradient id="phBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4338CA"/>
+      <stop offset="0.55" stop-color="#5B21B6"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="phWallet" x1="150" y1="196" x2="430" y2="356" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <linearGradient id="phCard" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="phMint" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="phBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <clipPath id="phClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#phClip)">
+    <rect width="640" height="400" fill="url(#phBg)"/>
+    <g filter="url(#phBlur)" opacity="0.52">
+      <circle cx="100" cy="92" r="112" fill="#818CF8"/>
+      <circle cx="556" cy="322" r="118" fill="#34D399"/>
+      <circle cx="536" cy="80" r="82" fill="#C4B5FD"/>
+    </g>
+    <g opacity="0.13" stroke="#FFFFFF">
+      <path d="M0 100h640M0 200h640M0 300h640M160 0v400M320 0v400M480 0v400"/>
+    </g>
+
+    <!-- Cards fanning out of the wallet -->
+    <g transform="rotate(-14 300 190)">
+      <rect x="212" y="120" width="176" height="106" rx="18" fill="#FFFFFF" opacity="0.24"/>
+    </g>
+    <g transform="rotate(-6 306 190)">
+      <rect x="232" y="132" width="176" height="106" rx="18" fill="url(#phCard)"/>
+      <rect x="250" y="152" width="30" height="22" rx="6" fill="#FDE68A"/>
+      <rect x="250" y="192" width="92" height="8" rx="4" fill="#FFFFFF" opacity="0.75"/>
+      <rect x="250" y="208" width="56" height="7" rx="3.5" fill="#FFFFFF" opacity="0.5"/>
+      <circle cx="368" cy="204" r="14" fill="#FFFFFF" opacity="0.35"/>
+      <circle cx="384" cy="204" r="14" fill="#FFFFFF" opacity="0.55"/>
+    </g>
+
+    <!-- Wallet body -->
+    <g>
+      <path d="M168 232h248a22 22 0 0 1 22 22v72a22 22 0 0 1-22 22H168a22 22 0 0 1-22-22v-72a22 22 0 0 1 22-22z" fill="url(#phWallet)"/>
+      <path d="M146 262h292v22H146z" fill="#C7D2FE" opacity="0.55"/>
+      <rect x="356" y="270" width="82" height="42" rx="14" fill="#4F46E5"/>
+      <circle cx="397" cy="291" r="9" fill="#FFFFFF" opacity="0.85"/>
+    </g>
+
+    <!-- Bill chips paid from the wallet -->
+    <g>
+      <rect x="52" y="120" width="132" height="52" rx="18" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="78" cy="146" r="12" fill="#FBBF24"/>
+      <rect x="98" y="136" width="70" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+      <rect x="98" y="152" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+    <g>
+      <rect x="36" y="196" width="132" height="52" rx="18" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="62" cy="222" r="12" fill="#38BDF8"/>
+      <rect x="82" y="212" width="70" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+      <rect x="82" y="228" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+    <g>
+      <rect x="466" y="128" width="132" height="52" rx="18" fill="#FFFFFF" opacity="0.16"/>
+      <circle cx="492" cy="154" r="12" fill="#F472B6"/>
+      <rect x="512" y="144" width="70" height="8" rx="4" fill="#FFFFFF" opacity="0.65"/>
+      <rect x="512" y="160" width="44" height="7" rx="3.5" fill="#FFFFFF" opacity="0.4"/>
+    </g>
+
+    <!-- Paid confirmation -->
+    <g>
+      <rect x="452" y="212" width="152" height="50" rx="16" fill="#FFFFFF" opacity="0.95"/>
+      <circle cx="480" cy="237" r="14" fill="url(#phMint)"/>
+      <path d="M474 237l4 5 9-10" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="504" y="227" width="76" height="8" rx="4" fill="#312E81" opacity="0.6"/>
+      <rect x="504" y="242" width="48" height="6" rx="3" fill="#312E81" opacity="0.35"/>
+    </g>
+  </g>
+</svg>

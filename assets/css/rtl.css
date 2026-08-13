@@ -116,12 +116,8 @@
   left: -2%;
 }
 
-[dir="rtl"] .link-arrow span {
-  transform: scaleX(-1);
-}
-
-[dir="rtl"] .link-arrow:hover span {
-  transform: scaleX(-1) translateX(4px);
+[dir="rtl"] .link-arrow:hover {
+  transform: translateX(-6px);
 }
 
 [dir="rtl"] .marquee-track {
