@@ -161,37 +161,68 @@
 
                     <!-- Store Info & Map -->
                     <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-                        <div class="card" style="align-items: flex-start; text-align: left;">
-                            <h3 class="mb-3" style="text-align: left;">Our Store</h3>
-                            <ul style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
-                                <li style="display: flex; gap: var(--space-2);">
-                                    <i data-lucide="map-pin" style="color: var(--color-primary); flex-shrink: 0;"></i>
-                                    <div>
-                                        <strong style="display: block; margin-bottom: 4px;">Address</strong>
-                                        <span class="text-muted">123 Tech Park, Financial District, City, Country 456001</span>
+                        <div class="card" style="align-items: center; text-align: center;">
+                            <h3 class="mb-3" style="text-align: center;">Our Store</h3>
+                            <ul class="contact-info-list" style="display: flex; flex-direction: column; gap: var(--space-3); width: 100%;">
+                                <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+                                    <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                        <i data-lucide="map-pin" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                        <strong style="margin: 0;">Address</strong>
                                     </div>
+                                    <span class="text-muted">123 Tech Park, Financial District, City, Country 456001</span>
                                 </li>
-                                <li style="display: flex; gap: var(--space-2);">
-                                    <i data-lucide="phone" style="color: var(--color-primary); flex-shrink: 0;"></i>
-                                    <div>
-                                        <strong style="display: block; margin-bottom: 4px;">Phone</strong>
-                                        <span class="text-muted">+1 234 567 8900</span>
+                                <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+                                    <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                        <i data-lucide="phone" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                        <strong style="margin: 0;">Phone</strong>
                                     </div>
+                                    <span class="text-muted">+1 234 567 8900</span>
                                 </li>
-                                <li style="display: flex; gap: var(--space-2);">
-                                    <i data-lucide="mail" style="color: var(--color-primary); flex-shrink: 0;"></i>
-                                    <div>
-                                        <strong style="display: block; margin-bottom: 4px;">Email</strong>
-                                        <span class="text-muted">support@zappay.com</span>
+                                <li style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;">
+                                    <div style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                                        <i data-lucide="mail" style="color: var(--color-primary); flex-shrink: 0;"></i>
+                                        <strong style="margin: 0;">Email</strong>
                                     </div>
+                                    <span class="text-muted">support@zappay.com</span>
                                 </li>
                             </ul>
                             
                             <!-- Store Timings -->
-                            <div class="timings-banner" style="margin-top: var(--space-4); width: 100%; text-align: left; justify-content: flex-start;">
+                            <div class="timings-banner" style="margin-top: var(--space-4); width: 100%; text-align: center; justify-content: center;">
                                 <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
                                 <div>
                                     <p style="font-size: 0.95rem;"><strong>Store Hours:</strong> Mon-Sat | 9:00 AM - 8:00 PM</p>
+                                </div>
+                            </div>
+
+                            <!-- Follow Us -->
+                            <div style="margin-top: var(--space-4); width: 100%;">
+                                <strong style="display: block; margin-bottom: 8px; text-align: center;">Follow Us</strong>
+                                <div class="social-links" style="margin-top: 0; justify-content: center;">
+                                    <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                        </svg></a>
+                                    <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                        </svg></a>
+                                    <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path
+                                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                                        </svg></a>
+                                    <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                            <path d="m10 15 5-3-5-3z" />
+                                        </svg></a>
                                 </div>
                             </div>
                         </div>

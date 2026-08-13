@@ -22,6 +22,10 @@
 
   --color-border: #E7EAF4;
   --color-border-soft: #EFF1F9;
+  /* Edge for interactive controls whose only affordance is the outline
+     (buttons, icon buttons). Matches --color-border in light; dark overrides
+     it, where the standard token all but vanishes against the surface. */
+  --color-border-strong: #E7EAF4;
 
   --color-error: #EF4444;
   --color-success: #10B981;
@@ -97,6 +101,9 @@
 
   --color-border: #1F2942;
   --color-border-soft: #182136;
+  /* #1F2942 reads at ~1.2:1 on --color-surface, so an outlined button looks
+     borderless. This clears 3:1, the WCAG minimum for UI boundaries. */
+  --color-border-strong: #55659A;
 
   --color-primary: #6366F1; /* Slightly brighter indigo for dark mode */
   --color-primary-hover: #818CF8;
@@ -510,7 +517,7 @@ section {
 
 .btn-outline {
   background-color: var(--color-surface);
-  border-color: var(--color-border);
+  border-color: var(--color-border-strong);
   color: var(--color-text-main);
   box-shadow: var(--shadow-sm);
 }
@@ -556,7 +563,7 @@ section {
 
 .icon-btn {
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-strong);
   color: var(--color-text-muted);
   cursor: pointer;
   width: 40px;
@@ -581,7 +588,7 @@ section {
 .hamburger {
   display: none;
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-strong);
   color: var(--color-text-main);
   width: 40px;
   height: 40px;
@@ -824,6 +831,22 @@ section {
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .grid-6 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .card {
   background-color: var(--color-surface);
@@ -1172,6 +1195,19 @@ a.card:hover {
   text-align: left;
 }
 
+/* Opt-in modifier for a split's copy column, overriding the left-aligned
+   default above. Applied to the text column, not the .split itself, so the
+   other columns and every unmarked .split section stay as they were.
+   rtl.css carries a matching override — see the note there. */
+.split-copy-center {
+  text-align: center;
+}
+
+.split .split-copy-center h2,
+.split .split-copy-center h3 {
+  text-align: center;
+}
+
 /* Testimonials */
 .quote-card {
   background: var(--color-surface);
@@ -1181,6 +1217,8 @@ a.card:hover {
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--space-2);
   height: 100%;
   position: relative;
@@ -1218,9 +1256,15 @@ a.card:hover {
 .quote-author {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 12px;
   padding-top: var(--space-2);
   border-top: 1px solid var(--color-border-soft);
+}
+
+.quote-author span {
+  text-align: left;
 }
 
 .quote-author img {
@@ -1283,12 +1327,12 @@ a.card:hover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  text-align: left;
+  text-align: center;
 }
 
 .post-tag {
   display: inline-flex;
-  align-self: flex-start;
+  align-self: center;
   padding: 5px 12px;
   border-radius: var(--radius-pill);
   background: var(--tint-primary-8);
@@ -1300,9 +1344,14 @@ a.card:hover {
 }
 
 .post-body h3 {
-  text-align: left;
+  text-align: center;
   font-size: 1.15rem;
+  line-height: 1.4;
   margin-bottom: 10px;
+  min-height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .post-body h3 a { color: inherit; }
@@ -1311,16 +1360,28 @@ a.card:hover {
 .post-body p {
   color: var(--color-text-muted);
   font-size: 0.93rem;
+  line-height: 1.65;
   flex-grow: 1;
+  margin-bottom: var(--space-2);
+  min-height: 4.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .post-meta {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   color: var(--color-text-muted);
   font-size: 0.82rem;
   margin-bottom: 12px;
+}
+
+.post-body .link-arrow {
+  align-self: center;
+  margin-top: auto;
 }
 
 /* CTA band */
@@ -1390,6 +1451,11 @@ a.card:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   border-color: #fff;
+}
+
+.cta-band .hero-actions .btn {
+  min-width: 250px;
+  justify-content: center;
 }
 
 /* Forms */
@@ -1601,6 +1667,20 @@ a.card:hover {
 .social-links svg,
 .social-links i { width: 17px; height: 17px; }
 
+/* Light theme overrides for social links inside cards */
+.card .social-links a {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.card .social-links a:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -1784,16 +1864,36 @@ a.card:hover {
   opacity: 1;
 }
 
-/* Auth Pages Specifics */
+/* Auth Pages Specifics — single centered card */
 .auth-wrapper {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-4) var(--space-3);
+  /* Top padding clears the floating tools so the card never sits under them */
+  padding: clamp(76px, 8vw, 96px) var(--space-3) var(--space-5);
   background-color: var(--color-bg);
   position: relative;
   overflow: hidden;
+}
+
+/* Theme + direction controls, pinned to the page corner (flips in RTL) */
+.auth-tools {
+  position: absolute;
+  top: 20px;
+  inset-inline-end: var(--space-3); /* Lines up with the card edge on narrow screens */
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.auth-tools .icon-btn {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.auth-tools .icon-btn:hover {
+  background-color: var(--tint-primary-8);
 }
 
 .auth-wrapper::before {
@@ -1810,92 +1910,178 @@ a.card:hover {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 1fr;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
-}
-
-.auth-shell.has-art {
-  grid-template-columns: 0.85fr 1fr;
-}
-
-.auth-art {
-  position: relative;
-  display: none;
-  min-height: 560px;
-  color: #fff;
-  padding: var(--space-5) var(--space-4);
-}
-
-.auth-art img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Scrim so the caption stays readable over the artwork */
-.auth-art::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(11, 16, 32, 0) 40%, rgba(11, 16, 32, 0.78) 100%);
-}
-
-.auth-art-content {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.auth-art-content h2 {
-  color: #fff;
-  text-align: left;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.auth-art-content p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95rem;
-  margin: 0;
+  max-width: 520px;
 }
 
 .auth-card {
   width: 100%;
   background: var(--color-surface);
-  padding: clamp(28px, 4vw, 52px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: clamp(28px, 5vw, 56px);
   text-align: center;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
 }
 
 .auth-logo {
   justify-content: center;
-  margin-bottom: var(--space-3);
-  font-size: 1.6rem;
+  margin-bottom: var(--space-4);
+  font-size: 1.35rem;
+  color: var(--color-primary);
+}
+.auth-logo:hover { color: var(--color-primary); }
+.auth-logo img { width: 30px; height: 30px; }
+
+/* Wide-tracked uppercase display title, echoing the brand's editorial tone */
+.auth-title {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading-1);
+  font-size: clamp(1.55rem, 5vw, 2.05rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  margin-bottom: 12px;
+}
+
+.auth-sub {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  max-width: 34ch;
+  margin: 0 auto var(--space-4);
+}
+
+/* Micro labels sit above generously sized fields */
+.auth-card .form-group {
+  margin-bottom: var(--space-2);
+}
+
+.auth-card .form-label {
+  text-transform: uppercase;
+  letter-spacing: var(--track-eyebrow);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.auth-card .form-control {
+  padding: 15px 18px;
+  line-height: 1.4; /* Fixed so the reveal toggle can be centred predictably */
+  box-shadow: none;
+  background-color: var(--color-surface-2);
+}
+
+.auth-card .form-control:focus {
+  background-color: var(--color-surface);
+}
+
+/* Password field with reveal toggle. The wrapper starts at the input's top
+   edge, so the toggle keeps its place when the error message appears below. */
+.field-password {
+  position: relative;
+}
+
+.field-password .form-control {
+  padding-inline-end: 50px;
+}
+
+.pw-toggle {
+  position: absolute;
+  inset-inline-end: 8px;
+  top: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+.pw-toggle:hover {
+  color: var(--color-primary);
+  background: var(--tint-primary-8);
+}
+.pw-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.pw-toggle svg, .pw-toggle i { width: 18px; height: 18px; }
+
+/* Checkbox rows: "remember me", terms consent */
+.check {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: start;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Without this the native unchecked box stays white against the dark card */
+[data-theme="dark"] .check input[type="checkbox"] {
+  color-scheme: dark;
+}
+
+.check input[type="checkbox"].is-invalid {
+  outline: 2px solid var(--color-error);
+  outline-offset: 2px;
+}
+
+.auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: var(--space-2) 0 var(--space-3);
+  font-size: 0.9rem;
+}
+
+/* "Remember me" and "Forgot Password?" stay on one line at every width */
+.auth-row-split {
+  flex-wrap: nowrap;
+}
+
+.auth-row-split .check,
+.auth-row-split > a {
+  white-space: nowrap;
+}
+
+/* Full-width uppercase CTA */
+.btn-auth {
+  width: 100%;
+  padding: 16px 26px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
 }
 
 .social-auth {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: var(--space-3);
+  gap: 12px;
 }
 
 .btn-social {
+  width: 100%;
+  padding: 14px 20px;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-strong);
   color: var(--color-text-main);
   display: flex;
   align-items: center;
@@ -1916,7 +2102,9 @@ a.card:hover {
   text-align: center;
   margin: var(--space-3) 0;
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: var(--track-eyebrow);
 }
 .auth-divider::before, .auth-divider::after {
   content: '';
@@ -1925,6 +2113,28 @@ a.card:hover {
 }
 .auth-divider:not(:empty)::before { margin-right: 12px; }
 .auth-divider:not(:empty)::after { margin-left: 12px; }
+
+.auth-foot {
+  margin-top: var(--space-4);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+.auth-foot a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.auth-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: var(--space-2) 0 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.auth-note svg, .auth-note i { width: 14px; height: 14px; }
 
 /* Store Timings Banner */
 .timings-banner {
@@ -1941,6 +2151,22 @@ a.card:hover {
   text-align: center;
   position: relative;
   overflow: hidden;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.timings-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px -20px rgba(79, 70, 229, 0.7);
+}
+
+.timings-banner i,
+.timings-banner svg {
+  transition: transform 0.35s var(--ease-out);
+}
+
+.timings-banner:hover i,
+.timings-banner:hover svg {
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .timings-banner::before {
@@ -1960,6 +2186,15 @@ a.card:hover {
 .timings-banner strong { font-weight: 600; }
 [data-theme="dark"] .timings-banner { color: #fff; }
 
+@media (max-width: 599px) {
+  .timings-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-2);
+  }
+}
+
 /* About / Story Timeline */
 .timeline {
   border-left: 2px solid var(--tint-primary-24);
@@ -1970,8 +2205,13 @@ a.card:hover {
   position: relative;
   margin-bottom: var(--space-4);
   text-align: left;
+  transition: transform 0.3s ease;
 }
 .timeline-item:last-child { margin-bottom: 0; }
+.timeline-item strong {
+  display: block;
+  transition: color 0.3s ease;
+}
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -1983,6 +2223,18 @@ a.card:hover {
   background-image: var(--gradient-brand);
   border: 4px solid var(--color-surface);
   box-shadow: 0 0 0 1px var(--tint-primary-24);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(6px);
+}
+.timeline-item:hover strong {
+  color: var(--color-primary);
+}
+.timeline-item:hover::before {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px var(--tint-primary-14);
 }
 
 /* Milestones band */
@@ -2078,16 +2330,9 @@ html.js .reveal.is-visible {
   .hamburger {
     display: flex;
   }
-  .auth-shell.has-art {
-    grid-template-columns: 1fr;
-  }
   .footer-grid {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
-}
-
-@media (min-width: 1025px) {
-  .auth-art { display: block; }
 }
 
 @media (max-width: 768px) {
@@ -2106,6 +2351,26 @@ html.js .reveal.is-visible {
   .btn { padding: 11px 20px; font-size: 0.93rem; }
   .quick-pay { flex-direction: column; border-radius: var(--radius-lg); }
   .quick-pay .btn { width: 100%; }
+}
+
+/* Narrow-screen auth tuning. Comes last so it also wins over the generic
+   .btn sizing in the 360px block above. */
+@media (max-width: 400px) {
+  .auth-card {
+    padding: 30px 22px;
+  }
+  .auth-row {
+    font-size: 0.82rem;
+    gap: 8px;
+  }
+  .auth-card .btn-auth {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+  }
+  .auth-card .btn-social {
+    padding: 13px 16px;
+    font-size: 0.9rem;
+  }
 }
 
 /* Animations */
@@ -2222,12 +2487,14 @@ html.js .reveal.is-visible {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: var(--space-3);
+  /* Extra top padding reserves the badge lane on every card, so titles stay
+     on one line across the row whether or not a card is flagged Popular. */
+  padding: calc(var(--space-3) + 38px) var(--space-3) var(--space-3);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  text-align: left;
+  text-align: center;
   animation: plan-in 0.4s var(--ease-out) both;
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.3s ease;
 }
@@ -2255,7 +2522,8 @@ html.js .reveal.is-visible {
 .plan-badge {
   position: absolute;
   top: var(--space-3);
-  right: var(--space-3);
+  left: 50%;
+  transform: translateX(-50%);
   padding: 4px 11px;
   border-radius: var(--radius-pill);
   background-color: var(--tint-accent-10);
@@ -2280,10 +2548,14 @@ html.js .reveal.is-visible {
   margin: 2px 0 var(--space-2);
 }
 
+/* The list is centred as a block but its rows stay left-aligned, so the tick
+   icons line up in a single column instead of going ragged. */
 .plan-feats {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--space-3);
+  margin: 0 auto var(--space-3);
+  width: fit-content;
+  max-width: 100%;
   flex-grow: 1;
   display: grid;
   gap: 9px;
@@ -2295,6 +2567,7 @@ html.js .reveal.is-visible {
   gap: 9px;
   font-size: 0.9rem;
   color: var(--color-text-muted);
+  text-align: left;
 }
 
 .plan-feats i {
@@ -2313,13 +2586,12 @@ html.js .reveal.is-visible {
 }
 
 .plan-card h3 {
-  text-align: left;
+  text-align: center;
   font-size: 1.02rem;
   color: var(--color-text-muted);
   font-family: var(--font-body);
   letter-spacing: 0;
   margin-bottom: 4px;
-  padding-right: 84px; /* clears the badge */
 }
 
 /* ==========================================================================
@@ -2576,7 +2848,10 @@ html.js .reveal.is-visible {
   .tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
-    justify-content: flex-start;
+    /* "safe" keeps the centring while the tabs fit, then falls back to
+       start-alignment if they ever overflow, so none get cut off. */
+    justify-content: center;
+    justify-content: safe center;
     border-radius: var(--radius);
   }
   .tab-btn { padding: 10px 16px; font-size: 0.9rem; }
@@ -2908,10 +3183,11 @@ html.js .reveal.is-visible {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  text-align: center;
 }
 
 .person-body h3 {
-  text-align: left;
+  text-align: center;
   font-size: 1.15rem;
   margin-bottom: 2px;
 }
@@ -2933,6 +3209,7 @@ html.js .reveal.is-visible {
 
 .person-links {
   display: flex;
+  justify-content: center;
   gap: var(--space-1);
   padding-top: var(--space-2);
   margin-top: auto;
@@ -3213,4 +3490,113 @@ html.js .reveal.is-visible {
 .filter-empty p {
   color: var(--color-text-muted);
   margin-bottom: var(--space-3);
+}
+
+
+/* ==========================================================================
+   Three-card grids — deterministic column counts
+   Every .grid-3 / .step-grid / .plan-grid on the site holds exactly three
+   cards, so the wrap points are pinned here rather than left to auto-fit:
+   3 across on desktop, 2 across on tablet with the odd card centred,
+   1 across on phones.
+   ========================================================================== */
+
+.grid-3,
+.step-grid,
+.plan-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet — 2 across */
+@media (max-width: 1023px) {
+  .grid-3,
+  .step-grid,
+  .plan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* The third card is alone on its row: span both tracks and centre it at a
+     single column's width, instead of letting it hang to the left. */
+  .grid-3 > :last-child:nth-child(odd),
+  .step-grid > :last-child:nth-child(odd),
+  .plan-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - (var(--space-3) / 2));
+    justify-self: center;
+  }
+}
+
+/* Phone — 1 across, stacked */
+@media (max-width: 599px) {
+  .grid-3,
+  .step-grid,
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Undo the centring above, or the lone card would sit at half width. */
+  .grid-3 > :last-child:nth-child(odd),
+  .step-grid > :last-child:nth-child(odd),
+  .plan-grid > :last-child:nth-child(odd) {
+    grid-column: auto;
+    width: auto;
+  }
+}
+
+/* ==========================================================================
+   Operators grid — exactly six cards, so the wrap points are pinned here
+   rather than left to auto-fit: 6 x 1 on wide desktop, 3 x 2 on laptop and
+   tablet, 2 across on small tablets, then one per row on phones. Six divides
+   evenly by every count, so no row is ever left with an orphan card.
+   ========================================================================== */
+
+.grid-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Laptop and tablet — 3 x 2 (covers the 1024 and 768 widths) */
+@media (max-width: 1199px) {
+  .grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small tablet — 2 across */
+@media (max-width: 767px) {
+  .grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone — one card per row */
+@media (max-width: 479px) {
+  .grid-6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Page Store Info Hover Effects */
+.contact-info-list li {
+  transition: transform 0.3s var(--ease-out), background-color 0.3s ease, border-color 0.3s ease;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+}
+
+.contact-info-list li:hover {
+  background-color: var(--color-surface-2);
+  border-color: var(--color-border-soft);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info-list li i,
+.contact-info-list li svg {
+  transition: transform 0.3s var(--ease-out), color 0.3s ease;
+}
+
+.contact-info-list li:hover i,
+.contact-info-list li:hover svg {
+  transform: scale(1.18);
+  color: var(--color-primary-hover) !important;
 }

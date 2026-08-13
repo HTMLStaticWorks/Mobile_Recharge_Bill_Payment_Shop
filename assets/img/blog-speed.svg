@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of a payment travelling from a phone through network nodes to the operator in two seconds">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0369A1"/>
+      <stop offset="0.55" stop-color="#0E7490"/>
+      <stop offset="1" stop-color="#0C4A6E"/>
+    </linearGradient>
+    <linearGradient id="bzWire" x1="196" y1="200" x2="576" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="bzBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="bzCard" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#082F49" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="bzClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#bzClip)">
+    <rect width="640" height="400" fill="url(#bzBg)"/>
+    <g filter="url(#bzBlur)" opacity="0.5">
+      <circle cx="96" cy="330" r="120" fill="#22D3EE"/>
+      <circle cx="560" cy="60" r="110" fill="#6366F1"/>
+    </g>
+    <g opacity="0.12" stroke="#FFFFFF" stroke-width="1">
+      <path d="M0 120h640M0 200h640M0 280h640"/>
+      <path d="M160 0v400M320 0v400M480 0v400"/>
+    </g>
+
+    <!-- Phone -->
+    <g filter="url(#bzCard)">
+      <rect x="56" y="96" width="140" height="208" rx="26" fill="#FFFFFF"/>
+    </g>
+    <rect x="74" y="118" width="104" height="10" rx="5" fill="#E2E8F0"/>
+    <rect x="74" y="146" width="72" height="8" rx="4" fill="#EDF1F6"/>
+    <rect x="74" y="166" width="90" height="8" rx="4" fill="#EDF1F6"/>
+    <rect x="74" y="206" width="104" height="34" rx="17" fill="#0EA5E9"/>
+    <path d="M112 223h28" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="126" cy="268" r="16" fill="#E0F2FE"/>
+    <path d="M120 268l5 5 9-10" stroke="#0EA5E9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Wire between hops -->
+    <path d="M196 200h380" stroke="url(#bzWire)" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 14"/>
+
+    <!-- Hops -->
+    <g filter="url(#bzCard)">
+      <circle cx="292" cy="200" r="34" fill="#FFFFFF"/>
+      <circle cx="404" cy="200" r="34" fill="#FFFFFF"/>
+      <circle cx="516" cy="200" r="42" fill="#FFFFFF"/>
+    </g>
+    <g stroke="#0E7490" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M280 194h24M280 206h24"/>
+      <path d="M392 208l10-16 10 16"/>
+      <path d="M504 204l8 8 16-20"/>
+    </g>
+    <circle cx="292" cy="200" r="34" stroke="#22D3EE" stroke-width="3" opacity="0.55"/>
+    <circle cx="404" cy="200" r="34" stroke="#22D3EE" stroke-width="3" opacity="0.35"/>
+
+    <!-- Travelling pulse -->
+    <circle cx="348" cy="200" r="9" fill="#FBBF24"/>
+    <circle cx="348" cy="200" r="18" stroke="#FBBF24" stroke-width="3" opacity="0.45"/>
+
+    <!-- Timer badge -->
+    <g filter="url(#bzCard)">
+      <rect x="242" y="292" width="156" height="56" rx="28" fill="#FFFFFF"/>
+    </g>
+    <circle cx="278" cy="320" r="15" stroke="#0EA5E9" stroke-width="4"/>
+    <path d="M278 312v9l6 4" stroke="#0EA5E9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="304" y="330" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="26" font-weight="500" fill="#0F172A">2.0s</text>
+  </g>
+</svg>

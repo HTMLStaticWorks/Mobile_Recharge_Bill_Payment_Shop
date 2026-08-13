@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRechargeSimulator();
   initBulkCalculator();
   initFormValidation();
+  initPasswordToggles();
   initYear();
 });
 
@@ -707,6 +708,25 @@ function initYear() {
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = year; });
 }
 
+// --- Password Reveal Toggles (auth pages) ---
+function initPasswordToggles() {
+  document.querySelectorAll('[data-pw-toggle]').forEach(btn => {
+    const input = document.getElementById(btn.dataset.pwToggle);
+    if (!input) return;
+
+    btn.addEventListener('click', () => {
+      const revealed = input.type === 'text';
+      input.type = revealed ? 'password' : 'text';
+      btn.setAttribute('aria-pressed', String(!revealed));
+      btn.setAttribute('aria-label', revealed ? 'Show password' : 'Hide password');
+
+      // Rebuild the glyph from scratch so no attributes carry over between states.
+      btn.innerHTML = '<i data-lucide="' + (revealed ? 'eye' : 'eye-off') + '"></i>';
+      if (window.lucide) lucide.createIcons();
+    });
+  });
+}
+
 // --- Form Validation ---
 function initFormValidation() {
   const forms = document.querySelectorAll('.validate-form');
@@ -715,14 +735,21 @@ function initFormValidation() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let isValid = true;
-      const inputs = form.querySelectorAll('.form-control[required]');
+      const inputs = form.querySelectorAll('.form-control[required], input[type="checkbox"][required]');
 
       inputs.forEach(input => {
         // Reset classes
         input.classList.remove('is-invalid', 'is-valid');
 
         // Simple validation
-        if (!input.value.trim()) {
+        if (input.type === 'checkbox') {
+          if (!input.checked) {
+            input.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            input.classList.add('is-valid');
+          }
+        } else if (!input.value.trim()) {
           input.classList.add('is-invalid');
           isValid = false;
         } else if (input.type === 'email') {
@@ -741,8 +768,10 @@ function initFormValidation() {
           } else {
             input.classList.add('is-valid');
           }
-        } else if (input.type === 'checkbox') {
-          if (!input.checked) {
+        } else if (input.dataset.match) {
+          // Confirm-password style fields must equal the field they point at.
+          const source = form.querySelector('#' + input.dataset.match);
+          if (source && source.value !== input.value) {
             input.classList.add('is-invalid');
             isValid = false;
           } else {

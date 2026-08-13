@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZapPay - Online Payments & Recharge</title>
-    <meta name="description" content="ZapPay provides lightning-fast mobile recharge, DTH, and utility bill payments. Secure, instant, and zero extra charges.">
+    <meta name="description"
+        content="ZapPay provides lightning-fast mobile recharge, DTH, and utility bill payments. Secure, instant, and zero extra charges.">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -14,8 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script>
-      // Applied before first paint so a stored dark theme never flashes light.
-      (function(){try{var t=localStorage.getItem("zappay_theme");var d=localStorage.getItem("zappay_dir");var e=document.documentElement;if(t==="dark"){e.setAttribute("data-theme","dark");}else{e.removeAttribute("data-theme");}if(d){e.setAttribute("dir",d);}e.classList.add("js");}catch(err){}})();
+        // Applied before first paint so a stored dark theme never flashes light.
+        (function () { try { var t = localStorage.getItem("zappay_theme"); var d = localStorage.getItem("zappay_dir"); var e = document.documentElement; if (t === "dark") { e.setAttribute("data-theme", "dark"); } else { e.removeAttribute("data-theme"); } if (d) { e.setAttribute("dir", d); } e.classList.add("js"); } catch (err) { } })();
     </script>
     <!-- GA_TAG -->
     <style>
@@ -27,6 +29,7 @@
             padding: clamp(56px, 7vw, 112px) 0 clamp(48px, 6vw, 96px);
             text-align: center;
         }
+
         .hero-2::before {
             content: '';
             position: absolute;
@@ -37,6 +40,7 @@
                 radial-gradient(30rem 20rem at 84% 0%, rgba(139, 92, 246, 0.16), transparent 62%),
                 radial-gradient(30rem 20rem at 50% 108%, var(--tint-accent-10), transparent 62%);
         }
+
         .hero-2::after {
             content: '';
             position: absolute;
@@ -50,7 +54,12 @@
             -webkit-mask-image: radial-gradient(68% 62% at 50% 26%, #000 8%, transparent 76%);
             mask-image: radial-gradient(68% 62% at 50% 26%, #000 8%, transparent 76%);
         }
-        .hero-2 .container { position: relative; z-index: 1; }
+
+        .hero-2 .container {
+            position: relative;
+            z-index: 1;
+        }
+
         .hero-2 h1 .gradient-text {
             background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
             -webkit-background-clip: text;
@@ -66,6 +75,7 @@
             gap: 10px;
             margin-top: var(--space-3);
         }
+
         .quick-chips a {
             display: inline-flex;
             align-items: center;
@@ -78,15 +88,21 @@
             font-size: 0.88rem;
             box-shadow: var(--shadow-sm);
         }
+
         .quick-chips a:hover {
             color: var(--color-primary);
             border-color: var(--color-primary);
             transform: translateY(-2px);
         }
+
         .quick-chips svg,
-        .quick-chips i { width: 16px; height: 16px; }
+        .quick-chips i {
+            width: 16px;
+            height: 16px;
+        }
     </style>
 </head>
+
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Drawer Overlay -->
@@ -123,7 +139,7 @@
             <a href="index.html" class="logo">
                 <img src="assets/img/logo-mark.svg" alt="" width="34" height="34" class="logo-mark"> ZapPay
             </a>
-            
+
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="home2.html" class="active">Home 2</a>
@@ -157,12 +173,16 @@
                 <span class="eyebrow"><i data-lucide="rocket"></i> The new standard in digital payments</span>
 
                 <h1 class="mb-3">Powering your <span class="gradient-text">daily payments</span>.</h1>
-                <p class="lead hero-lead">From mobile plans to utility bills, manage every essential expense in one place &mdash; with zero friction and zero convenience fees.</p>
+                <p class="lead hero-lead">From mobile plans to utility bills, manage every essential expense in one
+                    place &mdash; with zero friction and zero convenience fees.</p>
 
                 <!-- Quick Recharge Form / Search (Visual Mockup) -->
                 <form class="quick-pay" action="services.html" role="search">
-                    <label class="form-label" for="quick_number" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Mobile or consumer number</label>
-                    <input type="text" id="quick_number" class="form-control" placeholder="Enter mobile or consumer number&hellip;" style="flex: 1;">
+                    <label class="form-label" for="quick_number"
+                        style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Mobile
+                        or consumer number</label>
+                    <input type="text" id="quick_number" class="form-control"
+                        placeholder="Enter mobile or consumer number&hellip;" style="flex: 1;">
                     <button type="submit" class="btn btn-primary">Proceed <i data-lucide="arrow-right"></i></button>
                 </form>
 
@@ -275,16 +295,7 @@
                 </div>
                 <div class="grid grid-4">
                     <!-- Data Card -->
-                    <div class="card reveal">
-                        <div class="card-media">
-                            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                                alt="Wireless modem and data dongle" loading="lazy" width="800" height="500">
-                        </div>
-                        <div class="card-icon"><i data-lucide="wifi"></i></div>
-                        <h3 class="card-title">Data Cards</h3>
-                        <p>Recharge your 4G/5G data dongles instantly.</p>
-                        <a href="services.html" class="btn btn-outline">Recharge</a>
-                    </div>
+
                     <!-- FASTag -->
                     <div class="card reveal">
                         <div class="card-media">
@@ -491,8 +502,8 @@
                                     <p>I ran a recharge at 2am when my data died mid-deadline. It went through before I
                                         could switch tabs. That is the whole review.</p>
                                     <div class="quote-author">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
-                                            alt="" width="46" height="46" loading="lazy">
+                                        <img src="assets/img/avatar-rahul.png" alt="" width="46" height="46"
+                                            loading="lazy">
                                         <span>
                                             <span class="name">Rahul S.</span><br>
                                             <span class="role">Pays 4 bills a month</span>
@@ -510,8 +521,8 @@
                                     <p>We top up 60 staff connections every month. What used to be a full morning of
                                         work is now one upload and one invoice.</p>
                                     <div class="quote-author">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
-                                            alt="" width="46" height="46" loading="lazy">
+                                        <img src="assets/img/avatar-anita.png" alt="" width="46" height="46"
+                                            loading="lazy">
                                         <span>
                                             <span class="name">Anita K.</span><br>
                                             <span class="role">Retail business owner</span>
@@ -529,8 +540,8 @@
                                     <p>Other apps quote one price and charge another at the last screen. Here the number
                                         I tap is the number that leaves my account.</p>
                                     <div class="quote-author">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
-                                            alt="" width="46" height="46" loading="lazy">
+                                        <img src="assets/img/avatar-vikram.png" alt="" width="46" height="46"
+                                            loading="lazy">
                                         <span>
                                             <span class="name">Vikram D.</span><br>
                                             <span class="role">DTH &amp; broadband customer</span>
@@ -548,8 +559,8 @@
                                     <p>My mother pays her electricity bill on this herself now. She has never once
                                         called me to ask how. Nothing else I set up for her can claim that.</p>
                                     <div class="quote-author">
-                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&amp;fit=crop&amp;w=140&amp;h=140&amp;q=80"
-                                            alt="" width="46" height="46" loading="lazy">
+                                        <img src="assets/img/avatar-priya.png" alt="" width="46" height="46"
+                                            loading="lazy">
                                         <span>
                                             <span class="name">Priya M.</span><br>
                                             <span class="role">Utility bills, every month</span>
@@ -576,7 +587,8 @@
             <div class="container">
                 <div class="cta-band reveal">
                     <h2 class="mb-2">Manage multiple bills?</h2>
-                    <p>Create an account to save your favourite numbers and consumer IDs &mdash; then settle everything from one screen each month.</p>
+                    <p>Create an account to save your favourite numbers and consumer IDs &mdash; then settle everything
+                        from one screen each month.</p>
                     <div class="hero-actions">
                         <a href="register.html" class="btn btn-primary btn-lg">Create Account</a>
                         <a href="login.html" class="btn btn-outline btn-lg">I already have one</a>
@@ -594,12 +606,33 @@
                     <a href="index.html" class="footer-brand-logo">
                         <img src="assets/img/logo-mark.svg" alt="" width="34" height="34"> ZapPay
                     </a>
-                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online, and at our neighbourhood store.</p>
+                    <p>Your trusted partner for lightning-fast mobile recharges and secure bill payments &mdash; online,
+                        and at our neighbourhood store.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+                        <a href="#" aria-label="ZapPay on Facebook"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on Instagram"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                            </svg></a>
+                        <a href="#" aria-label="ZapPay on YouTube"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                <path d="m10 15 5-3-5-3z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -626,9 +659,12 @@
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <ul class="footer-links">
-                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
-                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone" style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
-                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
+                        <li><a href="contact.html" class="d-flex align-center gap-2"><i data-lucide="map-pin"
+                                    style="width: 16px; height: 16px;"></i> 123 Tech Park, City, Country</a></li>
+                        <li><a href="tel:+12345678900" class="d-flex align-center gap-2"><i data-lucide="phone"
+                                    style="width: 16px; height: 16px;"></i> +1 234 567 8900</a></li>
+                        <li><a href="mailto:support@zappay.com" class="d-flex align-center gap-2"><i data-lucide="mail"
+                                    style="width: 16px; height: 16px;"></i> support@zappay.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -651,4 +687,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

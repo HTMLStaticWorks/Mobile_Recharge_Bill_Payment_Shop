@@ -75,9 +75,16 @@
 [dir="rtl"] .post-body,
 [dir="rtl"] .post-body h3,
 [dir="rtl"] .info-tile,
-[dir="rtl"] .auth-art-content h2,
 [dir="rtl"] .glass-chip {
   text-align: right;
+}
+
+/* Splits that opt into a centred copy column stay centred in RTL. Must come
+   after the rule above, which right-aligns .split headings by default. */
+[dir="rtl"] .split-copy-center,
+[dir="rtl"] .split .split-copy-center h2,
+[dir="rtl"] .split .split-copy-center h3 {
+  text-align: center;
 }
 
 [dir="rtl"] .post-tag,
@@ -129,4 +136,17 @@
 [dir="rtl"] .quick-pay .form-control {
   padding-left: 16px;
   padding-right: 18px;
+}
+
+[dir="rtl"] .quote-card p {
+  direction: ltr;
+}
+
+[dir="rtl"] .quote-author span {
+  direction: ltr;
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-item:hover {
+  transform: translateX(-6px);
 }

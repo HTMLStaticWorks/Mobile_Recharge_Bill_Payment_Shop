@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="Illustration of many staff connections being recharged together and billed on a single invoice">
+  <defs>
+    <linearGradient id="bkBg" x1="0" y1="0" x2="640" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BE123C"/>
+      <stop offset="0.5" stop-color="#9F1239"/>
+      <stop offset="1" stop-color="#4C1D95"/>
+    </linearGradient>
+    <filter id="bkBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <filter id="bkCard" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#4C0519" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="bkClip"><rect width="640" height="400"/></clipPath>
+  </defs>
+  <g clip-path="url(#bkClip)">
+    <rect width="640" height="400" fill="url(#bkBg)"/>
+    <g filter="url(#bkBlur)" opacity="0.5">
+      <circle cx="110" cy="80" r="115" fill="#FB7185"/>
+      <circle cx="556" cy="336" r="120" fill="#A78BFA"/>
+    </g>
+    <g opacity="0.13" stroke="#FFFFFF">
+      <circle cx="320" cy="200" r="176"/>
+      <circle cx="320" cy="200" r="118"/>
+    </g>
+
+    <!-- Grid of connections -->
+    <g fill="#FFFFFF" opacity="0.92">
+      <rect x="54" y="112" width="40" height="40" rx="12"/>
+      <rect x="102" y="112" width="40" height="40" rx="12"/>
+      <rect x="150" y="112" width="40" height="40" rx="12"/>
+      <rect x="198" y="112" width="40" height="40" rx="12"/>
+      <rect x="54" y="160" width="40" height="40" rx="12"/>
+      <rect x="102" y="160" width="40" height="40" rx="12"/>
+      <rect x="150" y="160" width="40" height="40" rx="12"/>
+      <rect x="198" y="160" width="40" height="40" rx="12"/>
+      <rect x="54" y="208" width="40" height="40" rx="12"/>
+      <rect x="102" y="208" width="40" height="40" rx="12"/>
+      <rect x="150" y="208" width="40" height="40" rx="12"/>
+      <rect x="198" y="208" width="40" height="40" rx="12"/>
+    </g>
+    <g fill="#FFFFFF" opacity="0.4">
+      <rect x="54" y="256" width="40" height="40" rx="12"/>
+      <rect x="102" y="256" width="40" height="40" rx="12"/>
+      <rect x="150" y="256" width="40" height="40" rx="12"/>
+      <rect x="198" y="256" width="40" height="40" rx="12"/>
+    </g>
+    <g fill="#BE123C" opacity="0.65">
+      <circle cx="74" cy="132" r="7"/><circle cx="122" cy="132" r="7"/><circle cx="170" cy="132" r="7"/><circle cx="218" cy="132" r="7"/>
+      <circle cx="74" cy="180" r="7"/><circle cx="122" cy="180" r="7"/><circle cx="170" cy="180" r="7"/><circle cx="218" cy="180" r="7"/>
+      <circle cx="74" cy="228" r="7"/><circle cx="122" cy="228" r="7"/><circle cx="170" cy="228" r="7"/><circle cx="218" cy="228" r="7"/>
+    </g>
+
+    <!-- Count badge -->
+    <g filter="url(#bkCard)">
+      <rect x="54" y="52" width="122" height="46" rx="23" fill="#FFFFFF"/>
+    </g>
+    <text x="76" y="83" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="24" font-weight="500" fill="#0F172A">200</text>
+    <rect x="128" y="68" width="30" height="8" rx="4" fill="#E2E8F0"/>
+
+    <!-- Merge arrow -->
+    <path d="M262 204h72" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+    <path d="M320 190l16 14-16 14" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+
+    <!-- Single invoice -->
+    <g filter="url(#bkCard)">
+      <rect x="368" y="82" width="212" height="244" rx="26" fill="#FFFFFF"/>
+    </g>
+    <rect x="368" y="82" width="212" height="58" rx="26" fill="#7C3AED"/>
+    <rect x="368" y="114" width="212" height="26" fill="#7C3AED"/>
+    <rect x="396" y="104" width="88" height="12" rx="6" fill="#FFFFFF" opacity="0.85"/>
+    <g fill="#EDF1F6">
+      <rect x="396" y="168" width="156" height="9" rx="4.5"/>
+      <rect x="396" y="190" width="120" height="9" rx="4.5"/>
+      <rect x="396" y="212" width="140" height="9" rx="4.5"/>
+      <rect x="396" y="234" width="104" height="9" rx="4.5"/>
+    </g>
+    <path d="M396 264h156" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="396" y="300" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="28" font-weight="500" fill="#0F172A">&#8377;59,800</text>
+    <circle cx="540" cy="290" r="20" fill="#DCFCE7"/>
+    <path d="M531 290l6 7 12-14" stroke="#059669" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
