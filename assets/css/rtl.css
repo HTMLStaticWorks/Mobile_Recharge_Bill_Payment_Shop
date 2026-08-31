@@ -146,3 +146,10 @@
 [dir="rtl"] .timeline-item:hover {
   transform: translateX(-6px);
 }
+
+/* Mirror the custom select chevron introduced for LTR selects. */
+[dir="rtl"] select.form-control {
+  padding-right: 16px;
+  padding-left: 44px;
+  background-position: left 16px center;
+}

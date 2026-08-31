@@ -1,0 +1,27 @@
+<svg width="176" height="60" viewBox="0 0 176 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coinA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <g id="icon">
+    <!-- outer coin body -->
+    <circle cx="26" cy="30" r="24" fill="url(#coinA)"/>
+    <!-- ridged rim: dashed stroke ring for milled-edge effect -->
+    <circle cx="26" cy="30" r="24" fill="none" stroke="#F6F8FC"
+            stroke-width="2" stroke-dasharray="2.2 3.2" opacity="0.55"/>
+    <!-- inner recessed circle -->
+    <circle cx="26" cy="30" r="18.5" fill="none" stroke="#F6F8FC"
+            stroke-width="1.2" opacity="0.6"/>
+    <!-- bolt -->
+    <path d="M29 15 L18 32 H25 L22 47 L35 27.5 H27.5 Z" fill="#F6F8FC"/>
+  </g>
+
+  <g id="wordmark">
+    <text x="60" y="40" font-family="Poppins, Manrope, 'Segoe UI', sans-serif"
+          font-weight="700" font-size="30" letter-spacing="-0.5"
+          fill="url(#coinA)">Zap<tspan font-weight="600">Pay</tspan></text>
+  </g>
+</svg>

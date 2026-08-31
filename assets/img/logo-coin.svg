@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" role="img" aria-label="ZapPay">
+  <defs>
+    <linearGradient id="coinA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <!-- outer coin body -->
+  <circle cx="26" cy="26" r="24" fill="url(#coinA)"/>
+  <!-- ridged rim: dashed stroke ring for milled-edge effect -->
+  <circle cx="26" cy="26" r="24" fill="none" stroke="#F6F8FC"
+          stroke-width="2" stroke-dasharray="2.2 3.2" opacity="0.55"/>
+  <!-- inner recessed circle -->
+  <circle cx="26" cy="26" r="18.5" fill="none" stroke="#F6F8FC"
+          stroke-width="1.2" opacity="0.6"/>
+  <!-- bolt -->
+  <path d="M29 11 L18 28 H25 L22 43 L35 23.5 H27.5 Z" fill="#F6F8FC"/>
+</svg>
