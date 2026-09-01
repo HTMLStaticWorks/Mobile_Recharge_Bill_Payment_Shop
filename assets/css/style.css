@@ -2406,13 +2406,16 @@ html:not([data-theme="dark"]) .footer-bottom {
      the indigo-to-violet sweep read as too hot for a quiet info strip. */
   background-image: linear-gradient(120deg, #5B54E4 0%, #7C5CF0 100%);
   color: #fff;
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--radius-lg);
+  /* Sized to its own content rather than the full container: the strip is a
+     one-line aside, and stretched edge to edge it read as a page-wide band. */
+  max-width: 720px;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
-  margin: var(--space-4) 0;
+  margin: var(--space-4) auto;
   box-shadow: 0 14px 30px -18px rgba(79, 70, 229, 0.45);
   text-align: center;
   position: relative;
@@ -2448,7 +2451,7 @@ html:not([data-theme="dark"]) .footer-bottom {
 .timings-banner p,
 .timings-banner strong,
 .timings-banner div { color: #fff; }
-.timings-banner p { margin: 0; }
+.timings-banner p { margin: 0; font-size: 0.92rem; }
 .timings-banner strong { font-weight: 600; }
 [data-theme="dark"] .timings-banner { color: #fff; }
 
